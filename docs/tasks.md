@@ -217,78 +217,40 @@ CREATE TRIGGER on_auth_user_created_role
 
 # Phase 3 — Core Dashboard
 
-> **Status: ⬜ NOT STARTED** (mock exists, needs real data)
+> **Status: ✅ COMPLETE**
 
 ## 3.1 Strion Index Component (Real Data)
-- [ ] Fetch `current_index` from profiles
-- [ ] Fetch recent `index_history` for sparkline
-- [ ] Compute weekly trend delta from index_history
-- [ ] Large numeric display with trend arrow
-- [ ] "Execution variance detected" when trend is negative
+- [x] Fetch `current_index` from profiles
+- [x] Fetch recent `index_history` for sparkline
+- [x] Compute weekly trend delta from index_history
+- [x] Large numeric display with trend arrow
+- [x] "Execution variance detected" when trend is negative
 
 ## 3.2 Daily Missions Engine
 
 ### SQL: Protocol Assignments & Daily Execution
-```sql
-CREATE TABLE public.protocol_assignments (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
-  phase TEXT NOT NULL,
-  week INTEGER NOT NULL,
-  tasks JSONB NOT NULL DEFAULT '[]',
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  UNIQUE(user_id, phase, week)
-);
+- [x] Created `protocol_assignments` table with RLS and UNIQUE(user_id, phase, week)
+- [x] Created `daily_execution` table with RLS and UNIQUE(user_id, date)
 
-ALTER TABLE public.protocol_assignments ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Users can view own assignments"
-  ON public.protocol_assignments FOR SELECT USING (auth.uid() = user_id);
-
-CREATE POLICY "Users can insert own assignments"
-  ON public.protocol_assignments FOR INSERT WITH CHECK (auth.uid() = user_id);
-
-CREATE TABLE public.daily_execution (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
-  date DATE NOT NULL DEFAULT CURRENT_DATE,
-  completed_tasks JSONB NOT NULL DEFAULT '[]',
-  execution_score NUMERIC NOT NULL DEFAULT 0,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  UNIQUE(user_id, date)
-);
-
-ALTER TABLE public.daily_execution ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Users can view own execution"
-  ON public.daily_execution FOR SELECT USING (auth.uid() = user_id);
-
-CREATE POLICY "Users can insert own execution"
-  ON public.daily_execution FOR INSERT WITH CHECK (auth.uid() = user_id);
-
-CREATE POLICY "Users can update own execution"
-  ON public.daily_execution FOR UPDATE USING (auth.uid() = user_id);
-```
-
-- [ ] Create `supabase/functions/generate-protocol/index.ts`
+- [x] Create `supabase/functions/generate-protocol/index.ts`
   - Hybrid approach: predefined task templates + AI selection/customization
   - Uses diagnostic results to assign relevant tasks
   - Generates all 12 weeks of protocol
-- [ ] Fetch today's tasks from protocol_assignments
-- [ ] Toggle completion state → update daily_execution
-- [ ] Subtle compression animation (200–250ms, scale 0.98→1)
-- [ ] Small decimal tick on index (max +0.1 per task)
-- [ ] Update execution_score server-side
+- [x] Fetch today's tasks from protocol_assignments
+- [x] Toggle completion state → update daily_execution
+- [x] Subtle compression animation (200–250ms, scale 0.98→1)
+- [x] Small decimal tick on index (max +0.1 per task)
+- [x] Update execution_score server-side
 
 ## 3.3 Phase Indicator (Real Data)
-- [ ] Compute current phase/week from `protocol_start_date`
-- [ ] Phase 1 (days 1–28), Phase 2 (days 29–56), Phase 3 (days 57–84)
-- [ ] Thin progress bar
+- [x] Compute current phase/week from `protocol_start_date`
+- [x] Phase 1 (days 1–28), Phase 2 (days 29–56), Phase 3 (days 57–84)
+- [x] Thin progress bar
 
 ## 3.4 Checkpoint Countdown
-- [ ] Calculate days to next checkpoint (14, 21, 30, 60, 90)
-- [ ] Minimal circular indicator
-- [ ] Trigger recalibration flow when reached
+- [x] Calculate days to next checkpoint (14, 21, 30, 60, 90)
+- [x] Minimal circular indicator
+- [ ] Trigger recalibration flow when reached (Phase 7)
 
 ---
 
