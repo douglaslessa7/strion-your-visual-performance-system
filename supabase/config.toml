@@ -1,1 +1,4 @@
 project_id = "bvkpvncfjbeiatfsjnzn"
+
+[functions.compute-diagnostic]
+verify_jwt = false

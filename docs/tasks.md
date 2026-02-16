@@ -171,146 +171,47 @@ CREATE TRIGGER on_auth_user_created_role
 
 # Phase 2 — Onboarding Engine
 
-> **Status: ⬜ NOT STARTED**
+> **Status: ✅ COMPLETE**
 
 ## 2.1 Photo Storage Setup
-
-### SQL: Storage Bucket
-```sql
-INSERT INTO storage.buckets (id, name, public)
-VALUES ('user-photos', 'user-photos', false);
-
-CREATE POLICY "Users can upload own photos"
-  ON storage.objects FOR INSERT
-  WITH CHECK (
-    bucket_id = 'user-photos'
-    AND auth.uid()::text = (storage.foldername(name))[1]
-  );
-
-CREATE POLICY "Users can view own photos"
-  ON storage.objects FOR SELECT
-  USING (
-    bucket_id = 'user-photos'
-    AND auth.uid()::text = (storage.foldername(name))[1]
-  );
-
-CREATE POLICY "Users can delete own photos"
-  ON storage.objects FOR DELETE
-  USING (
-    bucket_id = 'user-photos'
-    AND auth.uid()::text = (storage.foldername(name))[1]
-  );
-```
-
-### SQL: Photo Sets Table
-```sql
-CREATE TABLE public.photo_sets (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
-  checkpoint_day INTEGER NOT NULL DEFAULT 0,
-  selfie_front_url TEXT,
-  selfie_side_url TEXT,
-  body_front_url TEXT,
-  body_side_url TEXT,
-  body_back_url TEXT,
-  selfie_side_alt_url TEXT,
-  body_side_alt_url TEXT,
-  metadata JSONB DEFAULT '{}',
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
-);
-
-ALTER TABLE public.photo_sets ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Users can view own photos"
-  ON public.photo_sets FOR SELECT USING (auth.uid() = user_id);
-
-CREATE POLICY "Users can insert own photos"
-  ON public.photo_sets FOR INSERT WITH CHECK (auth.uid() = user_id);
-
-CREATE POLICY "Users can update own photos"
-  ON public.photo_sets FOR UPDATE USING (auth.uid() = user_id);
-```
+- [x] Create private `user-photos` storage bucket with RLS
+- [x] Create `photo_sets` table with RLS
+- [x] Storage policies for upload/view/delete own photos
 
 ## 2.2 Photo Capture UI
-- [ ] Create `src/pages/Onboarding.tsx` with step management
-- [ ] Step 1: Photo upload grid (4 required + 3 optional)
-- [ ] Squared containers, max 8px radius
-- [ ] Border glow state after upload (accent color)
-- [ ] Required counter (e.g., "3/4 required uploaded")
-- [ ] Upload to `user-photos/{user_id}/day-{checkpoint}/{angle}.jpg`
-- [ ] Cannot proceed until 4 required photos uploaded
+- [x] Create `src/components/onboarding/PhotoCapture.tsx`
+- [x] 4 required + 3 optional photo grid
+- [x] Squared containers, max 8px radius
+- [x] Border glow state after upload (accent color)
+- [x] Required counter (e.g., "3/4 required uploaded")
+- [x] Upload to `user-photos/{user_id}/day-0/{angle}.ext`
+- [x] Cannot proceed until 4 required photos uploaded
 
 ## 2.3 Questionnaire UI
-- [ ] Step 2: Single-question-per-screen flow
-- [ ] Questions: height, weight, training frequency, skin concerns, beard (y/n), self-perception slider, primary goal, sleep hours, water intake, grooming frequency, hair concerns, body fat estimate
-- [ ] Top progress bar
-- [ ] Measured pacing (no overwhelming forms)
-- [ ] Store responses in `profiles.settings` JSONB or dedicated table
-
-### SQL: Questionnaire Responses
-```sql
-CREATE TABLE public.questionnaire_responses (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
-  checkpoint_day INTEGER NOT NULL DEFAULT 0,
-  responses JSONB NOT NULL DEFAULT '{}',
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  UNIQUE(user_id, checkpoint_day)
-);
-
-ALTER TABLE public.questionnaire_responses ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Users can view own responses"
-  ON public.questionnaire_responses FOR SELECT USING (auth.uid() = user_id);
-
-CREATE POLICY "Users can insert own responses"
-  ON public.questionnaire_responses FOR INSERT WITH CHECK (auth.uid() = user_id);
-
-CREATE POLICY "Users can update own responses"
-  ON public.questionnaire_responses FOR UPDATE USING (auth.uid() = user_id);
-```
+- [x] Create `src/components/onboarding/Questionnaire.tsx`
+- [x] Single-question-per-screen flow (12 questions)
+- [x] Questions: height, weight, training frequency, skin concerns, beard, self-perception slider, primary goal, sleep hours, water intake, grooming frequency, hair concerns, body fat estimate
+- [x] Top progress bar
+- [x] Store responses in `questionnaire_responses` table
 
 ## 2.4 Diagnostic Engine (Edge Function)
-- [ ] Create `supabase/functions/compute-diagnostic/index.ts`
-- [ ] Send photo URLs to Lovable AI Gateway (google/gemini-2.5-pro for vision)
-- [ ] Extract structured JSON: posture, symmetry, grooming, skin, structure
-- [ ] Compute initial Strion Index from questionnaire + AI analysis
-- [ ] Calculate personalized max potential range (85–90 typical)
-- [ ] Store results in `index_history` table
-- [ ] Update `profiles.current_index` and `profiles.max_potential`
-
-### SQL: Index History Table
-```sql
-CREATE TABLE public.index_history (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
-  date DATE NOT NULL DEFAULT CURRENT_DATE,
-  index_value NUMERIC NOT NULL,
-  execution_component NUMERIC NOT NULL DEFAULT 0,
-  visual_component NUMERIC NOT NULL DEFAULT 0,
-  structural_component NUMERIC NOT NULL DEFAULT 0,
-  metadata JSONB DEFAULT '{}',
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
-);
-
-ALTER TABLE public.index_history ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Users can view own index history"
-  ON public.index_history FOR SELECT USING (auth.uid() = user_id);
-
-CREATE POLICY "Users can insert own index history"
-  ON public.index_history FOR INSERT WITH CHECK (auth.uid() = user_id);
-```
+- [x] Create `supabase/functions/compute-diagnostic/index.ts`
+- [x] Send photo signed URLs to Lovable AI Gateway (google/gemini-2.5-pro for vision)
+- [x] Extract structured JSON via tool calling: index, potential, opportunities
+- [x] Compute initial Strion Index from questionnaire + AI analysis
+- [x] Calculate personalized max potential range
+- [x] Store results in `index_history` table
+- [x] Update `profiles.current_index` and `profiles.max_potential`
 
 ## 2.5 Diagnostic Results UI
-- [ ] Step 3: Full-screen results display
-- [ ] Large Strion Index number (e.g., 63.4)
-- [ ] Projected 90-day range (e.g., 78.0 – 82.5)
-- [ ] Top 3 structural opportunities list
-- [ ] CTA: "Begin Foundation Phase"
-- [ ] Set `profiles.onboarding_completed = true`
-- [ ] Set `profiles.protocol_start_date = CURRENT_DATE`
-- [ ] Redirect to Dashboard
+- [x] Create `src/components/onboarding/DiagnosticResults.tsx`
+- [x] Large Strion Index number display
+- [x] Projected 90-day range
+- [x] Top 3 structural opportunities list
+- [x] CTA: "Begin Foundation Phase"
+- [x] Set `profiles.onboarding_completed = true`
+- [x] Set `profiles.protocol_start_date = CURRENT_DATE`
+- [x] Redirect to Dashboard
 
 ---
 
