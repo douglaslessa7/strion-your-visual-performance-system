@@ -14,6 +14,87 @@ export type Database = {
   }
   public: {
     Tables: {
+      index_history: {
+        Row: {
+          created_at: string
+          date: string
+          execution_component: number
+          id: string
+          index_value: number
+          metadata: Json | null
+          structural_component: number
+          user_id: string
+          visual_component: number
+        }
+        Insert: {
+          created_at?: string
+          date?: string
+          execution_component?: number
+          id?: string
+          index_value: number
+          metadata?: Json | null
+          structural_component?: number
+          user_id: string
+          visual_component?: number
+        }
+        Update: {
+          created_at?: string
+          date?: string
+          execution_component?: number
+          id?: string
+          index_value?: number
+          metadata?: Json | null
+          structural_component?: number
+          user_id?: string
+          visual_component?: number
+        }
+        Relationships: []
+      }
+      photo_sets: {
+        Row: {
+          body_back_url: string | null
+          body_front_url: string | null
+          body_side_alt_url: string | null
+          body_side_url: string | null
+          checkpoint_day: number
+          created_at: string
+          id: string
+          metadata: Json | null
+          selfie_front_url: string | null
+          selfie_side_alt_url: string | null
+          selfie_side_url: string | null
+          user_id: string
+        }
+        Insert: {
+          body_back_url?: string | null
+          body_front_url?: string | null
+          body_side_alt_url?: string | null
+          body_side_url?: string | null
+          checkpoint_day?: number
+          created_at?: string
+          id?: string
+          metadata?: Json | null
+          selfie_front_url?: string | null
+          selfie_side_alt_url?: string | null
+          selfie_side_url?: string | null
+          user_id: string
+        }
+        Update: {
+          body_back_url?: string | null
+          body_front_url?: string | null
+          body_side_alt_url?: string | null
+          body_side_url?: string | null
+          checkpoint_day?: number
+          created_at?: string
+          id?: string
+          metadata?: Json | null
+          selfie_front_url?: string | null
+          selfie_side_alt_url?: string | null
+          selfie_side_url?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string
@@ -50,6 +131,30 @@ export type Database = {
           onboarding_completed?: boolean
           protocol_start_date?: string | null
           updated_at?: string
+        }
+        Relationships: []
+      }
+      questionnaire_responses: {
+        Row: {
+          checkpoint_day: number
+          created_at: string
+          id: string
+          responses: Json
+          user_id: string
+        }
+        Insert: {
+          checkpoint_day?: number
+          created_at?: string
+          id?: string
+          responses?: Json
+          user_id: string
+        }
+        Update: {
+          checkpoint_day?: number
+          created_at?: string
+          id?: string
+          responses?: Json
+          user_id?: string
         }
         Relationships: []
       }
