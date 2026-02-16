@@ -256,13 +256,13 @@ CREATE TRIGGER on_auth_user_created_role
 
 # Phase 4 — Protocol Page (Real Data)
 
-> **Status: ⬜ NOT STARTED** (mock exists)
+> **Status: ✅ COMPLETE**
 
-- [ ] Fetch protocol_assignments for all phases/weeks
-- [ ] 3 phase sections, collapsible weeks
-- [ ] Display only assigned tasks (view-only)
-- [ ] Highlight current week
-- [ ] Disable editing (user executes, system calibrates)
+- [x] Fetch protocol_assignments for all phases/weeks
+- [x] 3 phase sections, collapsible weeks
+- [x] Display only assigned tasks (view-only)
+- [x] Highlight current week
+- [x] Disable editing (user executes, system calibrates)
 
 ---
 
