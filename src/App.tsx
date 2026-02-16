@@ -12,6 +12,7 @@ import Dashboard from "./pages/Dashboard";
 import Protocol from "./pages/Protocol";
 import Progress from "./pages/Progress";
 import Onboarding from "./pages/Onboarding";
+import Assistant from "./pages/Assistant";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,8 @@ const App = () => (
             <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
             <Route path="/protocol" element={<ProtectedRoute><Protocol /></ProtectedRoute>} />
             <Route path="/progress" element={<ProtectedRoute><Progress /></ProtectedRoute>} />
+            <Route path="/assistant" element={<ProtectedRoute><Assistant /></ProtectedRoute>} />
+            <Route path="*" element={<NotFound />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>

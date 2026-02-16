@@ -289,51 +289,27 @@ CREATE TRIGGER on_auth_user_created_role
 
 # Phase 6 — AI Assistant
 
-> **Status: ⬜ NOT STARTED**
+> **Status: ✅ COMPLETE**
 
 ## 6.1 Edge Function
-- [ ] Create `supabase/functions/ai-assistant/index.ts`
-- [ ] Uses Lovable AI Gateway (google/gemini-3-flash-preview)
-- [ ] System prompt enforces analytical tone, no emojis, no motivation
-- [ ] 3 modes: Protocol, Recalibration, Visual Review
-- [ ] Streaming SSE response
-- [ ] Rate limit handling (429/402)
+- [x] Create `supabase/functions/ai-assistant/index.ts`
+- [x] Uses Lovable AI Gateway (google/gemini-3-flash-preview)
+- [x] System prompt enforces analytical tone, no emojis, no motivation
+- [x] 3 modes: Protocol, Recalibration, Visual Review
+- [x] Streaming SSE response
+- [x] Rate limit handling (429/402)
 
 ### SQL: Conversations Table
-```sql
-CREATE TABLE public.assistant_conversations (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
-  mode TEXT NOT NULL DEFAULT 'protocol',
-  messages JSONB NOT NULL DEFAULT '[]',
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
-);
-
-ALTER TABLE public.assistant_conversations ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Users can view own conversations"
-  ON public.assistant_conversations FOR SELECT USING (auth.uid() = user_id);
-
-CREATE POLICY "Users can insert own conversations"
-  ON public.assistant_conversations FOR INSERT WITH CHECK (auth.uid() = user_id);
-
-CREATE POLICY "Users can update own conversations"
-  ON public.assistant_conversations FOR UPDATE USING (auth.uid() = user_id);
-
-CREATE TRIGGER update_conversations_updated_at
-  BEFORE UPDATE ON public.assistant_conversations
-  FOR EACH ROW EXECUTE FUNCTION public.update_updated_at();
-```
+- [x] Created `assistant_conversations` table with RLS
 
 ## 6.2 Assistant UI
-- [ ] Create `src/pages/Assistant.tsx`
-- [ ] Add route `/assistant` in App.tsx
-- [ ] Mode selector (Protocol / Recalibration / Visual Review)
-- [ ] Chat interface with streaming token display
-- [ ] Photo upload for Visual Review mode
-- [ ] No typing animation theatrics — simple fade-in
-- [ ] Add to bottom navigation
+- [x] Create `src/pages/Assistant.tsx`
+- [x] Add route `/assistant` in App.tsx
+- [x] Mode selector (Protocol / Recalibration / Visual Review)
+- [x] Chat interface with streaming token display
+- [ ] Photo upload for Visual Review mode (deferred to Phase 7)
+- [x] No typing animation theatrics — simple fade-in
+- [x] Added to bottom navigation (already wired)
 
 ---
 
