@@ -44,12 +44,12 @@
 
 # Phase 1 — Authentication
 
-> **Status: ⬜ NOT STARTED**
+> **Status: 🔄 IN PROGRESS**
 
 ## 1.1 Supabase Auth Setup
-- [ ] Enable email + password in Supabase Auth
-- [ ] Create `profiles` table with auto-creation trigger
-- [ ] Create `user_roles` table (separate from profiles)
+- [x] Enable email + password in Supabase Auth
+- [x] Create `profiles` table with auto-creation trigger
+- [x] Create `user_roles` table (separate from profiles)
 
 ### SQL: Profiles Table
 ```sql
@@ -151,21 +151,21 @@ CREATE TRIGGER on_auth_user_created_role
 ```
 
 ## 1.2 Auth UI Implementation
-- [ ] Wire Login.tsx to `supabase.auth.signInWithPassword()`
-- [ ] Wire Signup.tsx to `supabase.auth.signUp()` with `emailRedirectTo`
-- [ ] Add `onAuthStateChange` listener in App.tsx
+- [x] Wire Login.tsx to `supabase.auth.signInWithPassword()`
+- [x] Wire Signup.tsx to `supabase.auth.signUp()` with `emailRedirectTo`
+- [x] Add `onAuthStateChange` listener in App.tsx
 - [ ] Redirect: first-time → `/onboarding`, returning → `/dashboard`
-- [ ] Add loading states (subtle opacity shift)
-- [ ] Add error messages (neutral tone, no exclamation marks)
-- [ ] Create ProtectedRoute wrapper component
+- [x] Add loading states (subtle opacity shift)
+- [x] Add error messages (neutral tone, no exclamation marks)
+- [x] Create ProtectedRoute wrapper component
 
 ### Reference: `src/pages/Login.tsx`, `src/pages/Signup.tsx`, `src/App.tsx`
 
 ## 1.3 Session & Route Protection
-- [ ] Create `AuthProvider` context with session state
-- [ ] Guard `/dashboard`, `/protocol`, `/progress`, `/assistant`, `/profile` behind auth
-- [ ] Redirect unauthenticated users to `/login`
-- [ ] Add logout functionality
+- [x] Create `AuthProvider` context with session state
+- [x] Guard `/dashboard`, `/protocol`, `/progress`, `/assistant`, `/profile` behind auth
+- [x] Redirect unauthenticated users to `/login`
+- [x] Add logout functionality
 
 ---
 
