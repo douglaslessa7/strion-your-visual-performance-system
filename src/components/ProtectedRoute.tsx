@@ -1,8 +1,9 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
-  const { session, loading } = useAuth();
+  const { session, loading, onboardingCompleted } = useAuth();
+  const location = useLocation();
 
   if (loading) {
     return (
@@ -14,6 +15,16 @@ const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
 
   if (!session) {
     return <Navigate to="/login" replace />;
+  }
+
+  // Redirect to onboarding if not completed (unless already on /onboarding)
+  if (onboardingCompleted === false && location.pathname !== "/onboarding") {
+    return <Navigate to="/onboarding" replace />;
+  }
+
+  // Redirect away from onboarding if already completed
+  if (onboardingCompleted === true && location.pathname === "/onboarding") {
+    return <Navigate to="/dashboard" replace />;
   }
 
   return <>{children}</>;

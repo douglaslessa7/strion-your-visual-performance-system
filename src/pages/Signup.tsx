@@ -12,7 +12,7 @@ const Signup = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
-  const { session, loading: authLoading } = useAuth();
+  const { session, loading: authLoading, onboardingCompleted } = useAuth();
 
   if (authLoading) {
     return (
@@ -23,7 +23,7 @@ const Signup = () => {
   }
 
   if (session) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to={onboardingCompleted === false ? "/onboarding" : "/dashboard"} replace />;
   }
 
   const handleSignup = async (e: React.FormEvent) => {
