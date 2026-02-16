@@ -6,9 +6,11 @@ import BottomNav from "@/components/dashboard/BottomNav";
 import { cn } from "@/lib/utils";
 
 interface TaskItem {
-  id: string;
-  name: string;
+  id?: string;
+  label?: string;
+  name?: string;
   category: string;
+  duration?: string;
 }
 
 interface WeekData {
@@ -73,7 +75,6 @@ const Protocol = () => {
 
         setPhases(result);
 
-        // Auto-expand current week
         if (profileRes.data?.current_phase && profileRes.data?.current_week) {
           setExpandedWeeks(new Set([`${profileRes.data.current_phase}-${profileRes.data.current_week}`]));
         }
@@ -125,9 +126,7 @@ const Protocol = () => {
                   <div className="px-5 py-4 flex items-center justify-between">
                     <div>
                       <p className="text-sm font-semibold text-foreground">{phase.label}</p>
-                      <p className="text-xs text-muted-foreground">
-                        {PHASE_META[phase.phase]?.weekRange}
-                      </p>
+                      <p className="text-xs text-muted-foreground">{PHASE_META[phase.phase]?.weekRange}</p>
                     </div>
                     {isActive && (
                       <span className="text-[10px] font-semibold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-1 rounded">
@@ -148,9 +147,7 @@ const Protocol = () => {
                             onClick={() => toggleWeek(key)}
                             className={cn(
                               "w-full flex items-center justify-between px-5 py-3 text-left transition-system",
-                              isCurrent
-                                ? "bg-primary/5"
-                                : "hover:bg-muted/30"
+                              isCurrent ? "bg-primary/5" : "hover:bg-muted/30"
                             )}
                           >
                             <div className="flex items-center gap-2">
@@ -175,13 +172,13 @@ const Protocol = () => {
 
                           {expanded && (
                             <div className="px-5 pb-3 space-y-1.5">
-                              {w.tasks.map((task) => (
-                                <div
-                                  key={task.id}
-                                  className="flex items-center justify-between py-1.5 pl-2"
-                                >
+                              {w.tasks.map((task, idx) => (
+                                <div key={task.id || idx} className="flex items-center justify-between py-1.5 pl-2">
                                   <div>
-                                    <span className="text-sm text-secondary-foreground">{task.name}</span>
+                                    <span className="text-sm text-secondary-foreground">
+                                      {task.label || task.name}
+                                      {task.duration ? ` — ${task.duration}` : ""}
+                                    </span>
                                     <span className="ml-2 text-[10px] text-muted-foreground uppercase tracking-wider">
                                       {task.category}
                                     </span>
