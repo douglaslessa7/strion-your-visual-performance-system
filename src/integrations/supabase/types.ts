@@ -14,6 +14,33 @@ export type Database = {
   }
   public: {
     Tables: {
+      daily_execution: {
+        Row: {
+          completed_tasks: Json
+          created_at: string
+          date: string
+          execution_score: number
+          id: string
+          user_id: string
+        }
+        Insert: {
+          completed_tasks?: Json
+          created_at?: string
+          date?: string
+          execution_score?: number
+          id?: string
+          user_id: string
+        }
+        Update: {
+          completed_tasks?: Json
+          created_at?: string
+          date?: string
+          execution_score?: number
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       index_history: {
         Row: {
           created_at: string
@@ -131,6 +158,36 @@ export type Database = {
           onboarding_completed?: boolean
           protocol_start_date?: string | null
           updated_at?: string
+        }
+        Relationships: []
+      }
+      protocol_assignments: {
+        Row: {
+          created_at: string
+          id: string
+          phase: string
+          tasks: Json
+          updated_at: string
+          user_id: string
+          week: number
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          phase?: string
+          tasks?: Json
+          updated_at?: string
+          user_id: string
+          week?: number
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          phase?: string
+          tasks?: Json
+          updated_at?: string
+          user_id?: string
+          week?: number
         }
         Relationships: []
       }
