@@ -268,22 +268,22 @@ CREATE TRIGGER on_auth_user_created_role
 
 # Phase 5 — Progress Page (Real Data)
 
-> **Status: ⬜ NOT STARTED** (mock exists)
+> **Status: ✅ COMPLETE**
 
 ## 5.1 Timeline
-- [ ] Fetch photo_sets for all checkpoints
-- [ ] Horizontal scroll: Day 0 → 14 → 30 → 60 → 90
-- [ ] Photo thumbnails from private storage (signed URLs)
+- [x] Fetch photo_sets for all checkpoints
+- [x] Horizontal scroll: Day 0 → 14 → 30 → 60 → 90
+- [x] Photo thumbnails from private storage (signed URLs)
 
 ## 5.2 Side-by-Side Comparison
-- [ ] Two dropdown selectors for checkpoint dates
-- [ ] Fixed split layout, dark background
-- [ ] No flashy slider
+- [x] Two dropdown selectors for checkpoint dates
+- [x] Fixed split layout, dark background
+- [x] No flashy slider
 
 ## 5.3 Index Evolution Chart
-- [ ] Fetch index_history
-- [ ] Line chart: Composite, Execution, Visual components
-- [ ] Muted accent, clear grid, readable at mobile width
+- [x] Fetch index_history
+- [x] Line chart: Composite, Execution, Visual components
+- [x] Muted accent, clear grid, readable at mobile width
 
 ---
 
