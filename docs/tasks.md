@@ -154,7 +154,7 @@ CREATE TRIGGER on_auth_user_created_role
 - [x] Wire Login.tsx to `supabase.auth.signInWithPassword()`
 - [x] Wire Signup.tsx to `supabase.auth.signUp()` with `emailRedirectTo`
 - [x] Add `onAuthStateChange` listener in App.tsx
-- [ ] Redirect: first-time → `/onboarding`, returning → `/dashboard`
+- [x] Redirect: first-time → `/onboarding`, returning → `/dashboard`
 - [x] Add loading states (subtle opacity shift)
 - [x] Add error messages (neutral tone, no exclamation marks)
 - [x] Create ProtectedRoute wrapper component
