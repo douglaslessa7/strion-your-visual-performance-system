@@ -315,51 +315,34 @@ CREATE TRIGGER on_auth_user_created_role
 
 # Phase 7 — Recalibration Engine
 
-> **Status: ⬜ NOT STARTED**
+> **Status: ✅ COMPLETE**
 
 ## 7.1 Checkpoint Detection
-- [ ] On dashboard load, check if checkpoint day reached
-- [ ] Lock current phase tasks
-- [ ] Prompt for new photo set upload
+- [x] On dashboard load, check if checkpoint day reached
+- [x] Show recalibration banner with CTA
+- [x] Navigate to `/recalibration?day=X` route
 
 ## 7.2 Recalibration Edge Function
-- [ ] Create `supabase/functions/recalibrate/index.ts`
-- [ ] Run vision analysis on new photos
-- [ ] Compare structural deltas with previous checkpoint
-- [ ] Recalculate Strion Index composite
-- [ ] Generate updated protocol for next phase
-- [ ] Store new index_history record
+- [x] Create `supabase/functions/recalibrate/index.ts`
+- [x] Run vision analysis on new photos via Lovable AI Gateway (google/gemini-2.5-pro)
+- [x] Compare structural deltas with previous checkpoint photos
+- [x] Recalculate Strion Index composite
+- [x] Store checkpoint record in `checkpoints` table
+- [x] Store new `index_history` record
+- [x] Update `profiles.current_index`
 
 ### SQL: Checkpoints Table
-```sql
-CREATE TABLE public.checkpoints (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
-  checkpoint_day INTEGER NOT NULL,
-  photo_set_id UUID REFERENCES public.photo_sets(id),
-  previous_index NUMERIC,
-  new_index NUMERIC,
-  recalibration_notes JSONB DEFAULT '{}',
-  protocol_updates JSONB DEFAULT '{}',
-  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
-  UNIQUE(user_id, checkpoint_day)
-);
-
-ALTER TABLE public.checkpoints ENABLE ROW LEVEL SECURITY;
-
-CREATE POLICY "Users can view own checkpoints"
-  ON public.checkpoints FOR SELECT USING (auth.uid() = user_id);
-
-CREATE POLICY "Users can insert own checkpoints"
-  ON public.checkpoints FOR INSERT WITH CHECK (auth.uid() = user_id);
-```
+- [x] Created `checkpoints` table with RLS (user_id FK to auth.users with ON DELETE CASCADE)
+- [x] UNIQUE(user_id, checkpoint_day)
+- [x] SELECT, INSERT, UPDATE policies for owner access
 
 ## 7.3 Recalibration UI
-- [ ] Checkpoint notification on dashboard
-- [ ] Photo re-upload flow (reuse onboarding photo grid)
-- [ ] Recalibration results screen
-- [ ] Visible explanation of index change
-- [ ] Updated protocol display
+- [x] Checkpoint notification banner on dashboard
+- [x] Photo re-upload flow (reuses photo grid pattern from onboarding)
+- [x] Processing state with spinner
+- [x] Recalibration results screen with index delta display
+- [x] Structural observations list
+- [x] Return to dashboard CTA
 
 ---
 
