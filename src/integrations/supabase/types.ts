@@ -41,6 +41,50 @@ export type Database = {
         }
         Relationships: []
       }
+      checkpoints: {
+        Row: {
+          checkpoint_day: number
+          created_at: string
+          id: string
+          new_index: number | null
+          photo_set_id: string | null
+          previous_index: number | null
+          protocol_updates: Json | null
+          recalibration_notes: Json | null
+          user_id: string
+        }
+        Insert: {
+          checkpoint_day: number
+          created_at?: string
+          id?: string
+          new_index?: number | null
+          photo_set_id?: string | null
+          previous_index?: number | null
+          protocol_updates?: Json | null
+          recalibration_notes?: Json | null
+          user_id: string
+        }
+        Update: {
+          checkpoint_day?: number
+          created_at?: string
+          id?: string
+          new_index?: number | null
+          photo_set_id?: string | null
+          previous_index?: number | null
+          protocol_updates?: Json | null
+          recalibration_notes?: Json | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "checkpoints_photo_set_id_fkey"
+            columns: ["photo_set_id"]
+            isOneToOne: false
+            referencedRelation: "photo_sets"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       daily_execution: {
         Row: {
           completed_tasks: Json
