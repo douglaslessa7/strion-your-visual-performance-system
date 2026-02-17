@@ -361,16 +361,16 @@ CREATE TRIGGER on_auth_user_created_role
 
 # Phase 9 — Profile Page
 
-> **Status: ⬜ NOT STARTED**
+> **Status: ✅ COMPLETE**
 
-- [ ] Create `src/pages/Profile.tsx`
-- [ ] Add route `/profile` in App.tsx
-- [ ] Subscription status display
-- [ ] Potential range visibility
-- [ ] Data & photo privacy controls
-- [ ] Account deletion (with confirmation)
-- [ ] Logout button
-- [ ] No vanity statistics
+- [x] Create `src/pages/Profile.tsx`
+- [x] Add route `/profile` in App.tsx
+- [x] Subscription status display (placeholder for Stripe)
+- [x] Potential range visibility (current index, max potential, protocol day)
+- [x] Data & photo privacy controls (privacy info display)
+- [x] Account deletion (with confirmation dialog)
+- [x] Logout button
+- [x] No vanity statistics
 
 ---
 
