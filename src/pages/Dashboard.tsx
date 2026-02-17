@@ -1,11 +1,16 @@
 import { useEffect } from "react";
-import { TrendingUp, TrendingDown, Minus, Check, Clock, Loader2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { TrendingUp, TrendingDown, Minus, Check, Clock, Loader2, AlertCircle } from "lucide-react";
 import BottomNav from "@/components/dashboard/BottomNav";
+import { Button } from "@/components/ui/button";
 import { useDashboardData, useGenerateProtocol } from "@/hooks/useDashboardData";
 
 const Dashboard = () => {
   const { data, loading, toggleMission } = useDashboardData();
   const generateProtocol = useGenerateProtocol();
+  const navigate = useNavigate();
+
+  const checkpointReached = data && data.nextCheckpointDays <= 0;
 
   // Auto-generate protocol if none exists and missions are empty
   useEffect(() => {
@@ -70,6 +75,30 @@ const Dashboard = () => {
             <div className="h-full bg-primary rounded-full transition-system" style={{ width: `${data.phaseProgress}%` }} />
           </div>
         </div>
+
+        {/* Checkpoint Reached Banner */}
+        {checkpointReached && (
+          <div className="bg-primary/10 border border-primary/20 rounded-xl p-5 mb-6 animate-fade-in">
+            <div className="flex items-start gap-3">
+              <AlertCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+              <div className="flex-1 space-y-2">
+                <p className="text-sm font-semibold text-foreground">
+                  Day {data.nextCheckpointDay} checkpoint reached
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  Upload new photos to recalibrate your Strion Index and measure structural progress.
+                </p>
+                <Button
+                  size="sm"
+                  onClick={() => navigate(`/recalibration?day=${data.nextCheckpointDay}`)}
+                  className="mt-1"
+                >
+                  Begin Recalibration
+                </Button>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Today's Missions */}
         <div className="mb-6">
