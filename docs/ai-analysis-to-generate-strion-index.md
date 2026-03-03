@@ -73,12 +73,15 @@ The face is the strongest overall attractiveness predictor. Extraction is done v
 ## 2. Body Analysis: Anthropometry, Musculature, and Posture
 Body extraction is done via OpenPose/BlazePose (17 to 33+ keypoints) for angles, and segmentation silhouettes to estimate circumferences. Optionally, a 3D SMPL model is fitted to deduce volume.
 
-
-
 ### 2.1 Silhouette Ratios (Scientifically Anchored)
 * **Waist-to-Chest Ratio (WCR):** The primary determinant of women's ratings of male bodily attractiveness (explains 56% of the variance). Ideal between 0.70 and 0.75. The AI segments the torso silhouette and converts 2D widths into proxy circumferences via learned calibration.
 * **Shoulder-to-Waist Ratio (SWR):** Biacromial width divided by the waist. The classic V-Taper (ideal ~1.6).
 * **The BMI Problem:** Not directly measurable from photos and conflates muscle with fat. Silhouette-derived WCR and SWR are orders of magnitude more actionable and stable.
+* **Waist-to-Hip Ratio (WHR) and Pelvic-Lumbar Proportions:** While WCR and SWR dominate the upper-body attractiveness variance, WHR is the critical diagnostic metric for assessing central adiposity, pelvic structure, and overall systemic health. The ideal male WHR is ~0.90.
+  * *Landmark Mapping:* The AI calculates this ratio by identifying and extracting two distinct horizontal axes from the segmentation data:
+    * *Waist Minimum (Numerator):* The narrowest horizontal circumference proxy, typically located just above the umbilicus and below the inferior border of the rib cage in the frontal silhouette.
+    * *Hip Maximum (Denominator):* The widest horizontal circumference proxy at the pelvic region. The AI must cross-reference the frontal silhouette with the sagittal silhouette to locate the level of the greater trochanters and the maximum posterior projection of the gluteus maximus.
+  * *Adiposity Phenotyping:* Deviations significantly above the 0.90 threshold strongly flag the accumulation of android (central) fat. This measurement acts as a hard constraint, mandating a reprioritization of the user's protocol toward structured aerobic output and systemic deficit before any localized hypertrophy interventions are recommended.
 
 ### 2.2 Muscle Mass Distribution (Region-by-Region Assessment)
 Each group is scored by size, shape, separation, symmetry, and proportion to the structural frame:
@@ -86,6 +89,18 @@ Each group is scored by size, shape, separation, symmetry, and proportion to the
 * **Posterior (Back):** Traps, Rear deltoids, Lats (width and flare), Mid-back thickness, Spinal erector definition, Glutes (upper/lower fullness), Hamstrings (tie-in), and Calves.
 * **Definition Markers:** Muscle striations on the chest/shoulders, vascularity, and lower-back "Christmas tree" separation. Read via edge-density and oriented texture statistics.
 * **Body Fat Tiers:** The AI categorizes into categorical leanness "Tiers" (e.g., stages 1-7) based on abdominal definition and vascularity, rather than a rigid percentage, given lighting variations in 2D photos.
+* * **Sagittal Abdominal Diameter (SAD) vs. Frontal Definition (Visceral & TrA Diagnostics):** To accurately prescribe precise abdominal interventions (e.g., neuromuscular transversus abdominis control vs. systemic caloric deficit), the AI must execute a logical cross-reference between the frontal definition and the side-profile protrusion.
+  * *Frontal Definition Proxy:* The AI scans the abdominal region in the frontal photo for high-frequency edge density, analyzing the visibility of the linea alba and the tendinous inscriptions of the rectus abdominis. This serves as the primary proxy for subcutaneous leanness.
+  * *Sagittal Abdominal Diameter (SAD):* In the side-profile photo, the AI measures the maximum horizontal distance from the small of the back (lumbar curve) to the furthest anterior point of the abdominal wall.
+  * *Diagnostic Logic Gates:*
+    * *High Frontal Definition + High SAD (Protrusion):* The user presents low subcutaneous fat but significant abdominal distension. The AI flags this as either Transversus Abdominis (TrA) neuromuscular weakness or elevated Visceral Adipose Tissue (VAT). This strictly triggers targeted interventions (e.g., Stomach Vacuum / Tonal Corset training) and sleep optimization protocols.
+    * *Low Frontal Definition + High SAD:* Standard compound adiposity (subcutaneous + visceral). This triggers primary systemic deficit and aerobic protocols; it strictly inhibits neuromuscular TrA interventions until body fat drops below the 20% threshold.
+    * *Low Frontal Definition + Low SAD:* The classic "skinny-fat" or under-muscled phenotype. This triggers body recomposition protocols prioritized over aggressive caloric deficits.
+* * **Cervical/Neck Hypertrophy and Width (Frontal & Sagittal Extraction):** Neck circumference is a primary evolutionary cue for perceived physical dominance and formidability (explaining significant variance in upper-body attractiveness, per Sell et al., 2017). The AI must evaluate the cervical musculature independently of the user's shoulder width or overall body fat.
+  * *Frontal Cervical Width (Formidability Proxy):* The AI must extract the horizontal neck diameter at the level of the cricoid cartilage from the frontal segmentation silhouette. 
+  * *Neck-to-Jaw Ratio:* The AI compares the extracted cervical width to the Bigonial Width (jawline). The ideal proxy for maximum masculine formidability is a 1:1 ratio (where the neck width equals or slightly exceeds the jaw width). A significant negative deviation heavily penalizes the perceived upper-body strength score.
+  * *Sagittal Depth and Musculature:* In the side-profile image, the AI measures the anterior-posterior depth of the neck. It utilizes edge-detection and shadow mapping to assess the hypertrophy of the sternocleidomastoid (SCM) and splenius capitis muscles.
+  * *Isolation from Posture:* This volumetric measurement must be strictly isolated from the Cervical Vertebral Angle (Forward Head Posture). A user may possess significant cervical hypertrophy but poor alignment; the AI must parse the structural mass independently of the cervical spine geometry.
 
 ### 2.3 Posture, Alignment, and Symmetry (Front/Side/Back)
 * **Head and Neck:** Forward Head Posture (ear anterior to shoulder in side view). Cervical angle proxy.
@@ -115,14 +130,17 @@ To implement this commercially, the AI will run on these exact sequential pipeli
 8. *Optional*: 3DMM fit for stable shape features.
 9. Scoring Model (Regression/Ranking/Classification) + Uncertainty.
 
-### 3.2 Body Pipeline
-1. Person Detection.
-2. Pose Estimation (OpenPose/BlazePose).
-3. Segmentation (Silhouette, Torso, Limbs).
-4. Width/Ratio measurements at normalized body heights.
-5. *Optional*: SMPL body fit for volume/shape inference.
-6. Posture Metrics.
-7. Score Aggregation.
+### 3.2 Body Pipeline (Updated Execution Architecture)
+1. **Person Detection:** Bounding box extraction utilizing a robust architecture (e.g., YOLOv8) to isolate the user from the background.
+2. **Pose Estimation:** 33+ keypoint extraction via BlazePose or OpenPose to map skeletal joints, limbs, and critical angles.
+3. **Segmentation:** High-precision background removal and distinct silhouette extraction for the Torso, Limbs, and Pelvic regions.
+4. **Width/Ratio Measurements:** Calculation of horizontal spans at normalized body heights to establish WCR, SWR, WHR, and Neck-to-Jaw ratios.
+5. **Optional - SMPL Body Fit:** 3D mesh projection for volumetric and shape inference to bypass 2D lens distortion and improve circumference estimations.
+6. **Posture Metrics:** Angle calculation for Cervical Vertebral Angle (FHP), thoracic kyphosis, and pelvic tilt.
+7. **Phenotype & Profile Classification Gateway (CRITICAL STEP):** Before generating the final optimization score, the AI must categorize the user's structural and compositional state. This metadata is strictly required to route the correct protocol logic.
+   * *Structural Phenotype:* Proximity mapping to Ectomorph, Mesomorph, or Endomorph baselines using bone-to-mass ratios.
+   * *Actionable Profile Routing:* The AI strictly assigns a logic gate tag based on the extracted data (e.g., `PROFILE_A: BF > 25%` or `PROFILE_B: Trained/Lean`). This acts as the absolute source of truth for the LLM protocol generator, preventing contradictory prescriptions (e.g., prescribing a caloric surplus to an Endomorph with high central adiposity).
+8. **Score Aggregation:** Final computation of the baseline STRION Index and the actionable Optimization Score, coupled with the Confidence Interval metric based on photo capture quality.
 
 ---
 
