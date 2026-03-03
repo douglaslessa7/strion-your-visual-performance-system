@@ -47,12 +47,21 @@ The face is the strongest overall attractiveness predictor. Extraction is done v
 
 ---
 
-### 1.4 Periorbital Region (Eyes), Nose, and Lips
+### 1.4 Periorbital Region (Eyes), Nose, Lips, and Dentition
 
 - **Eyes and Eyelids (Palpebral Fissure):** The AI maps eye width/height (Eye Aspect Ratio) and Scleral Show (inferior sclera exposure). The ideal male Canthal Tilt is positive (1° to 2°), measured by the arctangent of canthi coordinates.
 - **Under-Eye Quality:** The AI segments the region to measure dark circles (chromatic shift to blue/purple/brown), tear trough depth proxy via shadow geometry, and puffiness (edema) via bulge contours.
 - **Nose:** Tip projection, presence of a dorsal hump (profile curvature), and nostril symmetry.
-- **Mouth and Expression:** Upper-to-lower lip ratio, vermilion area divided by lower-face area, and mouth corner tilt (neutral vs. downturned, which severely affects perceived affect and sociability).
+- **Nasal Vestibule and Aural (Ear) Clearances (Hygiene Failure Signals):**
+  - **Alar Rim Boundary Check:** The AI must establish a strict bounding box directly beneath the alar rim (the lower edge of the nostrils) in the frontal and semi-profile photos. The detection algorithm scans for high-contrast, dark pixel vectors (terminal hairs) protruding below this architectural boundary.
+  - **Tragus/Helix Check:** In the profile/side photograph, the AI scans the external auditory meatus (specifically the tragus and helix) for visible terminal hair structures.
+  - **Penalty Execution:** Detection of protruding hair in either region operates as a binary Pass/Fail logic gate. A "Fail" severely penalizes the Global Grooming Execution Quality score and instantly triggers the Domain F targeted trimming protocol.
+- **Mouth, Expression, and Labial Surface Quality:** - **Morphometrics:** Upper-to-lower lip ratio, vermilion area divided by lower-face area, and mouth corner tilt (neutral vs. downturned — critical for evaluating the resting expression penalty and DAO tension).
+  - **Labial Desquamation & Cheilitis (Texture Proxy):** The labial mucosa lacks a thick stratum corneum. The AI must scan the vermilion border and the central body of the lips utilizing high-frequency edge detection. It searches for highly localized white pixel clustering (macroscopic desquamation/flaking) and vertical micro-fissures (cracking) that disrupt the specular reflectance of the lip surface. Detection of these irregularities triggers hydration and exfoliation protocols, as they act as a potent negative health cue.
+- **Dentition and Enamel Colorimetry (The P1 Profile Gateway):** - **Smile Detection and Segmentation:** The AI must run an active classifier to determine if the user's teeth are visible in the frontal photograph. If visible, the system must tightly segment the exposed enamel, strictly isolating it from the labial mucosa, gingival tissue, and ambient shadows of the oral cavity.
+  - **CIELAB Extraction ($L^*$ and $b^*$ axes):** Extrinsic chromogen accumulation (yellowing) is the primary target for Tier 5 hygiene protocols. The AI extracts the mean pixel values of the segmented enamel and converts them to the CIELAB color space.
+  - **Diagnostic Thresholds:** The AI evaluates the $b^*$ axis (yellow/blue shift) and the $L^*$ axis (lightness/luminance). A high $b^*$ value combined with a low $L^*$ value actively flags the user for the P1 Profile (Dental Discoloration). The AI must calculate the relative $\Delta E$ to an idealized aesthetic baseline; if the gap exceeds the clinically perceptible threshold ($\Delta E > 3.3$), it triggers the mandatory prescription of Domain E tooth whitening protocols.
+  - **Lighting Normalization Flag:** Because ambient yellow light can falsely elevate the $b^*$ reading, the AI must cross-reference the enamel color with the sclera (white of the eye) color. If both share an identical yellow tint, the AI must flag a white-balance error rather than strictly penalizing the dental score.
 
 ### 1.5 Skin and Dermatological Markers (Pixel-Level)
 
@@ -80,6 +89,17 @@ The AI cannot aggregate all blemishes into a single "Acne Lesion Count." Because
 ### 1.6 Grooming (Hair, Beard, and Eyebrows)
 
 - **Hair (Hairline and Density):** Hairline position (Trichion-Glabella distance / total face height). Detection of M-shaped recession (Norwood scale) and proxies for crown thinning and scalp show-through. Maintenance evaluates frizz and uneven edges.
+- **Scalp Pathology and Malassezia Overgrowth Proxies (Profile C4 Gateway):**
+  - **Hairline Erythema Extraction:** The AI must scan the immediate 1-2 cm boundary where the forehead skin meets the anterior hairline. It applies the CIELAB $a^*$ axis (redness) check specifically to this boundary zone to detect marginal scalp inflammation common in Seborrheic Dermatitis.
+  - **Macroscopic Flake Detection:** The AI deploys an artifact-detection matrix over the proximal hair shafts (roots) and the user's upper shoulder region (if wearing dark clothing in the full-body capture). It specifically isolates clustered, high-contrast white/yellow irregularly shaped pixels.
+  - **Diagnostic Logic:** A positive detection of root-level flakes + hairline erythema forces the LLM to classify the user into Profile C4 (Oily/Dandruff) and absolutely prioritizes anti-fungal (Ketoconazole) interventions before any stylistic Domain C haircuts are recommended.
+- **Hair Texture Morphology and Curl Pattern Classification:**
+  - **Architectural Necessity:** The AI cannot accurately prescribe fWHR-optimizing haircuts or washing frequencies without first classifying the structural geometry of the hair shaft. The computer vision pipeline must evaluate the outer boundary of the hair silhouette and the internal structural lines to categorize the user into one of the core types.
+  - **Morphological Feature Extraction:** - _Type 1 (Straight):_ Linear pixel trajectories flowing continuously from root to tip; high specular reflection (shine) due to flat cuticle alignment.
+    - _Type 2 (Wavy):_ Sinusoidal, elongated "S" curves with lower frequency and wider radius.
+    - _Type 3 (Curly):_ Helical/spiral structures with high-frequency wave patterns.
+    - _Type 4 (Coily):_ Tightly packed, zigzag or highly coiled structures with low specular reflection and high visual density.
+  - **The Shrinkage Proxy:** For Type 3 and Type 4 detections, the AI must mathematically flag a "Shrinkage Factor" to the LLM. It must inform the protocol generator that the visual length in the dry photograph represents only 30-50% of the true biological hair length, strictly modifying the verbal instructions generated for the user's barber.
 - **Beard and Facial Hair:** Mapped by coverage, density (opacity), neckline/cheek line precision, symmetry, and length category. Preference is frequency-dependent (culture/time trends), with _heavy stubble_ being the overall peak in the literature.
 - **Eyebrows:** Thickness (~25% of the eye width is ideal), density, arch height, interbrow distance, and grooming cleanliness. The AI uses a skeleton curve fit on the segmentation.
 
