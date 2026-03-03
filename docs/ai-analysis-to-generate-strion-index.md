@@ -31,10 +31,18 @@ The face is the strongest overall attractiveness predictor. Extraction is done v
 * **Midline Integrity:** Assesses whether the philtrum, nose tip, chin point, and glabella align on a perfect vertical axis. Deviations here are highly noticeable to human perception.
 * **Feature-Level Asymmetry:** The AI must analyze left-right deltas in eye height, canthal tilt, nasal axis, nostril size, and mouth corner height. Severe penalty thresholds: Eyelids (2 mm), mouth (3 mm), nose (4 mm).
 
-### 1.3 Lower Third, Jaw, and Chin
+### 1.3 Midface, Jaw, Chin, and Malar Projection
+
 * **Jaw Width and Shape:** Bigonial width and frontal jawline curvature act as masculinity metrics.
 * **Chin Projection (Pogonion) and Profile:** Projection relative to the vertical facial plane and mentolabial angle (ideal between 107° and 118°). A reduction of -2.5mm drastically affects the score.
 * **Facial Adiposity (Leanness Cues):** The best isolated predictor of health. Measured via cheek-to-jaw contour curvature, lower-face width, and submental angle/shadow (double chin), requiring lighting normalization.
+* **Malar Projection and Midface Fullness (The Ogee Curve):**
+    * **Definition & Distinction:** The critical distinction the AI must make is between bone width and tissue projection. While fWHR measures the fixed bizygomatic skeletal width in the frontal plane, "Malar Projection" measures the anterior volume (soft tissue overlying the zygomatic bone) in the sagittal and oblique planes. In facial aesthetics, this is represented by the Ogee Curve — an architectural double "S" line that, in a well-developed face, flows convexly over the zygomatic eminence and dips concavely into the buccal/lower midface region before meeting the jawline.
+    * **Computational Extraction (Frontal Photometry):** Since the AI cannot measure 3D depth with millimeter precision from a native 2D frontal image, it must utilize photometric analysis based on Specular Highlights. The AI segments the malar region: a flat or deflated midface will present a diffuse, low-intensity light reflection. A high, well-developed malar projection will create concentrated, high-intensity specular peaks on the cheekbones, validating soft tissue volume.
+    * **Computational Extraction (Profile/Semi-Profile Landmarks):** Using landmarks (e.g., MediaPipe), the AI extracts the contour line from the external canthus to the oral commissure. A linear or sunken contour (lack of convexity in the Ogee Curve) generates a low "Midface Fullness Score," regardless of whether the frontal fWHR width is high.
+    * **Protocol Mapping Trigger:** It is this exact variable (Malar Projection/Ogee Curve) — and not fWHR — that must trigger the prescription of practices T1-P02 (Targeted Zygomatic Resistance Training) and T1-P11 (Gua Sha), ensuring the AI focuses on muscular/soft-tissue volume gain where bone structure permits.
+
+---
 
 ### 1.4 Periorbital Region (Eyes), Nose, and Lips
 * **Eyes and Eyelids (Palpebral Fissure):** The AI maps eye width/height (Eye Aspect Ratio) and Scleral Show (inferior sclera exposure). The ideal male Canthal Tilt is positive (1° to 2°), measured by the arctangent of canthi coordinates.
@@ -98,8 +106,14 @@ To implement this commercially, the AI will run on these exact sequential pipeli
 4. Geometric Feature Extraction (Ratios/Angles).
 5. Skin Segmentation and Artifact Removal (ignore beard and eyebrow pixels).
 6. Skin Feature Extraction (Texture/Color via CIELAB/GLCM).
-7. *Optional*: 3DMM fit for stable shape features.
-8. Scoring Model (Regression/Ranking/Classification) + Uncertainty.
+7. **Computational Differentiation Matrix: Adiposity vs. Edema (The Periorbital Proxy Rule)**
+    * **The Biological Constraint:** The AI cannot determine systemic body fat percentage (BF%) with absolute clinical precision using only a facial photograph. This creates a severe risk of the AI confusing Structural Subcutaneous Adiposity (which requires the T1-P01 Systemic Fat Loss recommendation) with Transient Interstitial Fluid Retention/Edema (which requires the T1-P07 Sodium Reduction or T1-P08 Alcohol Reduction recommendation).
+    * **The Proxy Protocol (Ground Truth):** To resolve this computational ambiguity, the AI is programmed to utilize the periorbital region (upper and lower eyelids) as the definitive proxy for inflammation and edema. Biologically, adipose tissue (subcutaneous fat) does not accumulate in thick volumes on the eyelids; however, interstitial fluid accumulates rapidly there due to the extreme thinness of periorbital skin and the laxity of the underlying connective tissue.
+    * **Execution Logic (Boolean Trigger via Segmentation):** The AI cross-references lower face contour data with periorbital segmentation:
+        * **Condition A (Adiposity Dominant):** IF the lower third bounding box indicates high volume (rounded/obscured mandibular curvature) AND the periorbital segmentation shows taut skin, visible bone contour, or deep tear troughs (absence of fluid pockets/edema), THEN the system classifies the facial volume as Adiposity. Primary protocol triggered: T1-P01.
+        * **Condition B (Edema/Inflammation Dominant):** IF the lower third bounding box indicates high volume AND the periorbital segmentation detects significant puffiness (edema measured via shadow geometry, tissue bulging, and chromatic shift), THEN the system classifies a significant portion of that facial volume as Fluid Retention. Primary protocols triggered: T1-P07, T1-P08, and T1-P06.
+8. *Optional*: 3DMM fit for stable shape features.
+9. Scoring Model (Regression/Ranking/Classification) + Uncertainty.
 
 ### 3.2 Body Pipeline
 1. Person Detection.
