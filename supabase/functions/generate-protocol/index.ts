@@ -125,6 +125,9 @@ G26. Halitosis Protocol — Tongue scraping 2×/day (morning and evening, after 
 G27. Body Hygiene — High Sweat Profile (H1) — Primary: clinical-strength antiperspirant (15–20% AlCl₃) applied to COMPLETELY DRY underarms at bedtime; leave 6–8h; wash off in morning. Induction: nightly × 2 weeks → maintenance 1–2×/week. Critical: dry skin is essential — moisture prevents AlCl₃ polymerization inside sweat ducts. Secondary: daily shower with BPO 5% or tea tree oil body wash (focus axillae, groin). Post-shower: lightweight non-comedogenic body lotion to damp skin. Fabric: cotton/linen/merino wool — avoid polyester. Effect: 82–87% eccrine output reduction at D14. ⚠️ ONLY if hyperhidrosis or significant visible sweat staining noted. Category: grooming. Intro: Week 1.
 G28. Nail Maintenance — Post-shower weekly: clip fingernails straight across leaving ~1mm white edge; file edges in one direction only (never saw back-and-forth — causes shaft delamination); push cuticles back gently with dry towel — do NOT cut cuticles (infection risk); clean subungual debris. Apply hand lotion after. Toenails: every 2–3 weeks, straight across (prevents ingrown nails). Category: grooming. Intro: Week 1.
 G29. Topical Minoxidil 3% — Beard Growth (B1/B2 profiles) — Apply 0.5mL 3% minoxidil liquid or foam to bilateral cheek and jawline 2×/day; massage in; leave minimum 4h before washing. ⚠️ DO NOT apply within 24h of any microneedling session. Shedding warning: beard may appear temporarily worse at D14–D30 (telogen release) — this is expected and signals biological activity. D90 result: +3–5 hairs/cm² in patchy zones; full terminal conversion continues to D120–D180. ⚠️ ONLY for beard absent (B1 profile) or significant patchiness. Distinct from G14 (scalp minoxidil). Category: grooming. Intro: Week 1.
+G30. Microneedling Facial para Densidade de Barba (B1/B2) — 0.5mm titanium dermaroller 2×/week. Sanitize in 70% isopropyl alcohol 5 min before each session. Roll over patchy cheek/jawline zones 4–5 passes: horizontal, vertical, diagonal, until mild erythema. ⚠️ DO NOT apply G29 (minoxidil) within 24h after needling — systemic absorption through disrupted skin risks cardiovascular side effects. Resume minoxidil the following day. ⚠️ ABSOLUTE CONTRAINDICATION: active acne — rolling over active lesions spreads C. acnes across dermis. ⚠️ At-home depth is strictly 0.5mm — never exceed. Combined with G29: up to 400% greater density improvement vs. minoxidil alone (Dhurat 2013 scalp extrapolation). ⚠️ Zero photo-detectable result before D90 — biological timer only. Communicate this to user at prescription: "No visible change expected before Day 90 — this is long-term follicular investment." ⚠️ ONLY for beard absent (B1) or significant patchiness (B2). NOT for adequate density profiles. Category: grooming. Intro: Week 1.
+G31. Brow Shape Calibration by fWHR — Daily brow combing + selective tweezing direction. Low fWHR (<1.9): maintain FLAT brow — do NOT pluck an arch into the lateral third (arching adds verticality to a face that already reads too long). Preserve maximum brow thickness. Remove only obvious strays below the flat lower baseline. Train brows flat daily with spoolie. Mid fWHR (1.9–2.1): maintain natural brow shape — no geometric modification. Only glabellar maintenance (G2) + sub-arch strays (G24) + asymmetry correction (G25). High fWHR (>2.1): accentuate natural arch by removing 3–5 hairs only from below the outer third (above the lateral iris). ⚠️ MASCULINITY WARNING: maximum 3–5 hairs per session — over-arching creates a feminized brow with a significant Cohen's d attractiveness penalty for male faces (Richer 2023). When in doubt, remove less. Mechanism: flat brow adds perceived facial width (Low fWHR); arched brow adds perceived verticality (High fWHR). Low photo-ROI practice — implement as Refinement phase supplement to G3 + G16. Category: grooming. Intro: Week 9.
+G32. Body Hygiene Protocol — Normal Sweat Profile (H2) — Full-body shower 2–3×/week (evidence-based: Harvard Health Level A — daily showering is not required and strips the acid mantle for normal-sweat individuals). Shower on exercise/heavy activity days regardless of schedule. Keep sessions short (3–5 min), lukewarm water. Use a pH-balanced body wash (pH 5.0–5.5) — avoid alkaline bar soaps. Apply standard deodorant daily regardless of shower schedule. Facial hygiene operates on its own schedule — daily face wash (S1) is independent of full-body shower days. ⚠️ MYTH DEBUNK (include in task label if user reports daily harsh soap routine): "Compensatory sebum overproduction from washing is false — sebaceous output is hormonally regulated, not triggered by lipid removal. Over-washing for H2 profiles disrupts the acid mantle without hygiene benefit." ⚠️ If H2 profile coexists with C5 (dry/sensitive scalp): clarify that face, scalp, and body washing frequencies are each independent protocols. Category: grooming. Intro: Week 1.
 
 ─── FOUNDATION HABITS (all users) ───
 H1.  Hydration Log — Track daily water intake target (2.5–3L). D1. Category: hydration. Intro: Week 1.
@@ -481,6 +484,9 @@ Identify which profile applies before building the body protocol.
   • TRUE (beard present, patchy/absent density):
     - Prescribe G9 (clean shave optimization) as primary grooming intervention.
     - Add G29 (minoxidil 3% beard) Week 1 — biological timer starts immediately.
+    - Add G30 (facial microneedling 0.5mm) Week 1 alongside G29 — up to 400% greater density vs. minoxidil alone. Mandatory 24h separation: microneedling day → no minoxidil. Minoxidil resumes the following day.
+    - MANDATORY task note for D14 checkpoint: "No visible density change expected before D90 — biological protocol. Clean shave (G9) is the visual intervention at D14."
+    - Skip G30 if acne_subtype = inflammatory or nodular_cystic (active acne contraindication for rolling).
     - Warn user of shedding phase at D14–D30.
     - Skip G1, G6, G16 until density improves.
 
@@ -512,8 +518,53 @@ Identify which profile applies before building the body protocol.
 ─── DENTAL DISCOLORATION FLAG (dental_discoloration_flag) ───
   • If TRUE: Add G5 (tooth whitening strips) in Week 2. One of the highest D14 photo-detectable ROI practices.
 
+─── BODY HYGIENE ROUTING (H1 / H2 profiles) ───
+  Read questionnaire responses for sweat production level and lifestyle context.
+
+  H1 — High sweat / hyperhidrosis indicators (visible staining, strong odor without antiperspirant):
+    - Prescribe G27 (clinical antiperspirant protocol) from Week 1, Day 1.
+    - Clinical-strength 15–20% AlCl₃ is the primary intervention.
+
+  H2 — Normal sweat production (standard daily activity, no visible staining):
+    - Prescribe G32 (H2 body hygiene protocol) from Week 1.
+    - Core prescription: 2–3×/week full-body shower, pH-balanced wash, daily deodorant.
+    - Daily face wash (S1) is always independent of shower schedule — communicate this separately.
+    - If user reports daily harsh soap showering: include myth-debunk note in task label.
+
+  If sweat profile is unclear from questionnaire: default to G32 (H2 protocol) — it is the conservative choice.
+
 ─── RESTING EXPRESSION FLAG (resting_expression_flag) ───
   • If TRUE: Add G12 (resting expression awareness) in Week 1. Zero cost, zero risk.
+
+─── EYEBROW ROUTING (S-profiles) ───
+  Read diagnostic notes for eyebrow condition before building grooming protocol.
+
+  S3 — Unibrow / Glabellar connection present:
+    - G2 (glabellar removal) is MANDATORY in Week 1, Day 1 — highest ROI single session in Domain D.
+    - Tweezers only — no waxing (imprecision risks removing medial brow head).
+    - Inner boundary: vertical line from inner canthus of each eye. All hairs between these lines = remove.
+    - Maintain every 10–14 days throughout 12-week protocol.
+    - D14 result: bilateral brow symmetry clearly AI-scorable. Flag as "Extreme D1 photo-detectable result."
+
+  S4 — Visible brow asymmetry (>3mm vertical displacement):
+    - G25 (asymmetry correction) is MANDATORY in Week 1 — FA >3mm is consciously detected by 37% of raters.
+    - Dual-brow technique only: pluck TOP of higher brow (lowers position) + BOTTOM of lower brow (raises position) simultaneously.
+    - NEVER correct both brows in the same direction — creates mismatched thickness.
+    - Target <1.5mm residual gap. 1–2 hairs per session maximum — photograph and reassess before continuing.
+    - Pair G25 with G2 (glabellar) from Week 1.
+
+  S1 — Thick, defined brows (adequate baseline):
+    - G2 maintenance (every 10–14 days) throughout.
+    - G24 (lower brow border definition) in Week 1 — removes sub-arch strays that suppress perceived canthal tilt.
+    - G31 (brow shape by fWHR) in Week 9 as Refinement layer — only if fWHR strategy from G3 + G16 indicates need.
+    - DO NOT over-pluck — thick brows are an asset. Remove only clear outliers.
+
+  S2 — Thin/sparse brows:
+    - G2 only (define brow start point by inner canthus). Never thin further.
+    - G31 in conservative mode: no thinning, only train direction with spoolie.
+    - NEVER prescribe G24 or G25 for S2 — every hair is structurally valuable.
+
+  For ALL profiles: G25 takes Phase 1 priority over G31. Symmetry correction before shape calibration.
 
 ─── HAIR TEXTURE TYPE (hair_texture_type) ───
   Read hair_texture_type before building any grooming protocol for G3, G20, G21, G22.
