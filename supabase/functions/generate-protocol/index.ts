@@ -66,17 +66,34 @@ F8.  Bilateral Masticatory Habituation — Consciously distribute chewing bilate
 F9.  Gua Sha / Facial Roller — 5–10 min daily, jaw/neck upward toward temples. ~2–3mm soft tissue contour reduction at 8 weeks via lymphatic drainage. Adjunct only — no structural change. Category: face. Intro: Week 3.
 
 ─── TIER 4: SKIN ───
+ACTIVE STACKING RULES (apply to all skin protocols):
+  BPO (S6) + Retinoid (S7) = INCOMPATIBLE same session. Use BPO AM only, retinoid PM only.
+  BPO (S6) + Vitamin C (S14) = INCOMPATIBLE. Separate AM/PM.
+  Retinoid (S7) + AHA/BHA (S5) = Conditional — different nights only, never same night.
+  Niacinamide (S4) + Tranexamic Acid (S13) = Highly synergistic — can use same routine.
+  Alpha-Arbutin (S16) + Vitamin C (S14) = Synergistic — dual tyrosinase inhibition.
+  All AHA/BHA use = MANDATORY SPF 30+ next AM.
+  ROUTINE APPLICATION SEQUENCE — MANDATORY ORDER:
+  AM: (1) Cleanser → (2) Vitamin C serum (if prescribed) → (3) Treatment serums (niacinamide, tranexamic acid) → (4) Moisturizer → (5) SPF — ALWAYS LAST.
+  PM: (1) Cleanser → (2) BHA/AHA (if prescribed, non-retinoid nights) → (3) Retinoid (retinoid nights) → (4) Moisturizer.
+  SPF is never in the middle. Applying other products on top of SPF disrupts the protective film and negates efficacy.
+  Retinoid nights and AHA/BHA nights must alternate — never same night.
 S1.  Gentle Cleanser 2×/day — Foundation of all skin protocols. Non-stripping. D1. Category: skincare. Intro: Week 1.
 S2.  Moisturizer AM + PM — Barrier repair and hydration. Essential before any actives. Category: skincare. Intro: Week 1.
 S3.  SPF 30+ Sunscreen — Daily AM. 83% of men skip — immediate high-ROI gap. Extends improvement ceiling. Only intervention proven to halt measurable facial aging progression (Hughes 2013 RCT). Category: skincare. Intro: Week 1.
-S4.  Niacinamide 5–10% serum — Sebum control, pore visibility, tone uniformity, redness, mild acne. Best-tolerated multi-target active. ⚠️ PRIMARY for dark_circle_type = pigmentary. Category: skincare. Intro: Week 2.
-S5.  Salicylic Acid 2% (BHA) — 3×/week. Texture, pore size, post-acne marks. ⚠️ PRIMARY for acne_subtype = comedonal. Category: skincare. Intro: Week 2.
+S4.  Niacinamide 5–10% serum — Sebum control, pore visibility, tone uniformity, redness, mild acne. Best-tolerated multi-target active. ⚠️ PRIMARY for dark_circle_type = pigmentary. Category: skincare. Intro: Week 2. ⚠️ Synergistic stack: Niacinamide + Tranexamic Acid = highly synergistic for post-acne PIH (complementary pathways). ⚠️ Post-shave redness reduction: niacinamide is particularly effective as post-shave ingredient — positions well as the primary post-shave serum for beard_present = false users.
+S5.  Salicylic Acid 2% BHA (comedonal) / Glycolic Acid 5–10% AHA (texture + tone) — BHA: oil-soluble, penetrates sebum-filled pores → comedone dissolution, pore visibility reduction. 3×/week PM. PRIMARY for acne_subtype = comedonal. Glycolic Acid: water-soluble, accelerates surface exfoliation → texture, luminosity, STU improvement. 2–3×/week PM on non-retinoid nights. ⚠️ AHA/BHA + Retinoid = use on different nights only (avoid same-night stacking). ⚠️ MANDATORY: SPF 30+ AM after any AHA/BHA use (increased photosensitivity). ⚠️ DO NOT use on compromised barrier (flaking, stinging). Category: skincare. Intro: Week 2.
 S6.  Benzoyl Peroxide 2.5–5% — 50–80% inflammatory lesion reduction achievable in 90 days. ⚠️ PRIMARY for acne_subtype = inflammatory. MANDATORY if inflammatory acne present. Category: skincare. Intro: Week 2.
-S7.  Tretinoin / Retinoid — Primary: Tretinoin 0.025–0.05% (Rx) — Level A, 40–52% improvement in texture/clarity/pigmentation at 52 weeks. Refer user to dermatologist. Fallback if no Rx access: Retinol 0.25–0.5% (OTC, weaker evidence). Introduce after 4 weeks of barrier prep. Start 3×/week, titrate to nightly. Category: skincare. Intro: Week 5.
-S8.  Low-glycemic diet + dairy reduction — IGF-1/mTORC1 pathway reduces acne load. Effect at D30–D60. ⚠️ ONLY if acne present (any subtype). Category: nutrition. Intro: Week 1.
+S7.  Tretinoin / Retinoid — Primary: Tretinoin 0.025–0.05% (Rx) — Level A, 40–52% improvement in texture/clarity/pigmentation at 52 weeks. Refer user to dermatologist. Fallback if no Rx access: Retinol 0.25–0.5% (OTC, weaker evidence). Introduce after 4 weeks of barrier prep. Introduction sequence — 1-2-3 Rule: Week 1 of retinoid = 1 night/week; Week 2 = 2 nights/week; Weeks 3–4 = 3 nights/week (every other night). After Week 6 tolerating nightly: consider concentration escalation. PURGE vs IRRITANT REACTION: purge = small papules in USUAL breakout areas, subsides in 2–6 weeks = normal. Irritant reaction = breakouts in NEW areas + burning/peeling/widespread redness = STOP all actives immediately, perform barrier recovery (S9 only) for 1–2 weeks before re-introduction. ⚠️ INCOMPATIBLE with BPO same session — BPO oxidizes tretinoin. BPO AM, retinoid PM only.
+S8.  Low-glycemic diet + dairy reduction — IGF-1/mTORC1 pathway reduces acne load. Effect at D30–D60. ⚠️ ONLY if acne present (any subtype). Category: nutrition. Intro: Week 1. ⚠️ WHEY PROTEIN NOTE: whey protein isolate is a concentrated source of the same IGF-1 signaling molecules as milk. Males training with whey protein daily who present with persistent inflammatory acne should trial switching to plant-based protein (pea, hemp, rice) for 4–8 weeks before concluding dairy has no role in their acne. ⚠️ OMEGA-3 ADJUNCT: For users with persistent inflammatory acne (acne_subtype = inflammatory), 1,000–2,000mg combined EPA+DHA daily reduces inflammatory lesion count via leukotriene B4 suppression (Guertler 2024, n=60: mean −10 inflammatory lesions at 16 weeks). Algae-derived source preferred for users on plant-based diets. Effect requires 8–12 weeks — prescribe from Week 1. [Evidence Level B, industry-funded — frame as adjunct, not primary intervention]. ⚠️ CORTISOL / STRESS NOTE (ACL-I profiles): Psychological stress → HPA axis → elevated cortisol → impaired ceramide synthesis + elevated pro-inflammatory cytokines → directly worsens inflammatory acne. For users with acne_subtype = inflammatory, frame sleep consistency (H2) and stress reduction as part of the acne protocol — not optional lifestyle additions. "Sleep deprivation and chronic stress are direct acne drivers via cortisol — the protocol's topical interventions underperform in a chronically elevated cortisol environment."
 S9.  Ceramide barrier repair moisturizer — Essential if compromised barrier (flaking, dehydration lines). Must precede retinol introduction. Category: skincare. Intro: Week 1.
 S10. Caffeine eye cream — Vasoconstriction reduces vascular dark circles. ⚠️ ONLY if dark_circle_type = vascular. Category: skincare. Intro: Week 2.
 S11. MEDICAL REFERRAL — Nodular/cystic acne exceeds OTC ceiling. Dermatologist required for these lesions. ⚠️ MANDATORY if acne_subtype = nodular_cystic. Category: skincare. Intro: Week 1.
+S12. Azelaic Acid 10–15% — AM or PM. Multi-target: anti-inflammatory, comedolytic, AND post-acne pigmentation (PIH + PIE simultaneously via tyrosinase inhibition + ROS reduction). Only active that treats active acne AND post-acne marks in one step. OTC ≤10% (weaker); Rx 15–20% is clinical evidence concentration. All-male RCT (Bladon 2003, n=46): significant lesion reduction vs placebo. ⚠️ PRIMARY when acne_subtype = comedonal OR inflammatory WITH concurrent STU disruption. Gentle alternative for users who cannot tolerate BPO or retinoids. Category: skincare. Intro: Week 2.
+S13. Tranexamic Acid 2–5% serum — 2× daily. Dual-action: blocks BOTH PIH (pigmentary) AND PIE (vascular/red marks) post-acne via plasmin inhibition — the only brightening agent targeting both simultaneously. ⚠️ HIGHEST-ROI post-acne active for Fitzpatrick II–IV males with residual brown + red marks. Pair with niacinamide (different mechanisms, synergistic). Evidence: Ebrahimi 2014 RCT — comparable to hydroquinone with fewer side effects. MANDATORY SPF50+ pairing. Category: skincare. Intro: Week 3.
+S14. Vitamin C (L-Ascorbic Acid 10–20%) serum — AM only, apply before moisturizer + SPF. Antioxidant (neutralizes UV free radicals), collagen cofactor (prolyl hydroxylase), tyrosinase inhibitor (STU/PIH). ⚠️ INCOMPATIBLE with BPO (BPO deactivates L-AA — use at different times). ⚠️ INCOMPATIBLE for active smokers — smoke-induced ROS immediately depletes applied Vitamin C; defer until cessation. Must use opaque airless packaging (oxidizes rapidly). Category: skincare. Intro: Week 3.
+S15. Post-shave Barrier Repair — Within 2 minutes of shaving: apply barrier-repair moisturizer containing ceramides + niacinamide + glycerin to shaved areas. Shaving = mechanical barrier disruption → acute TEWL spike + microtears → C. acnes translocation + inflammatory response. Draelos 2012 RCT (n=20 all-male): 5% niacinamide post-shave moisturizer significantly reduced TEWL over 3 weeks vs vehicle. ⚠️ MANDATORY for all beard_present = false users and beard_present = true users who shave the neck. DO NOT apply retinoids or AHAs in the immediate post-shave window — disrupted barrier = over-penetration risk. Schedule actives for PM if shaving is done in AM. Category: skincare. Intro: Week 1.
+S16. Alpha-Arbutin 1–2% — 1–2× daily. Competitive tyrosinase inhibition → PIH reduction. More stable and less cytotoxic than hydroquinone. Arruda 2022 RCT (n=58, Fitzpatrick III–V): significant PIH reduction vs vehicle. ⚠️ PRIMARY for Fitzpatrick III–V users with post-acne PIH and/or pseudofolliculitis barbae hyperpigmentation (shaving-induced PIH along beard line). EU regulatory update 2024 (SCCS 2024/996): max 2% in face products. MANDATORY SPF pairing. Category: skincare. Intro: Week 3.
 
 ─── TIER 5: GROOMING ───
 G1.  Beard Neckline Definition — Define at 2 finger-widths above Adam's apple. D1. Highest grooming ROI per minute. ⚠️ ONLY if beard_present = true. Category: grooming. Intro: Week 1.
@@ -321,20 +338,118 @@ Identify which profile applies before building the body protocol.
     - MUST prescribe S6 (BPO) from Week 2.
     - Add S8 (low-glycemic diet) from Week 1.
     - DO NOT introduce S5 (BHA) or S7 (retinol) before Week 6 — risk of barrier overload.
+    - If STU disruption is also present (post-acne marks): add S13 (Tranexamic Acid) from Week 3 — addresses PIH and PIE simultaneously while acne is being controlled by S6.
+    - Consider S12 (Azelaic Acid) as alternative or complement to S6 if barrier tolerance is lower — azelaic acid treats both active acne AND post-acne marks.
 
   • "comedonal":
     - MUST prescribe S5 (BHA) from Week 2.
     - Add S4 (niacinamide) for tone support.
     - S7 (retinol) can be introduced from Week 5.
+    - If STU disruption from post-acne marks: add S12 (Azelaic Acid) from Week 2 — addresses comedonal acne AND post-inflammatory pigmentation simultaneously.
 
   • "none":
     - Standard maintenance: S1, S2, S3, S4 from Week 1.
     - S7 (retinol) from Week 5 for texture and tone optimization.
 
+  ─── DERMATOLOGY REFERRAL TRIGGERS — BEYOND NODULAR/CYSTIC ───
+
+  S11 covers nodular/cystic acne. These additional triggers require explicit referral notes in the protocol — NOT a standard protocol prescription:
+
+  • Suspected rosacea: FR (facial redness) score is high + photo notes suggest flushing, burning, stinging, or visible telangiectasias WITHOUT acne etiology → include referral note: "Persistent facial redness with these characteristics requires dermatological evaluation — rosacea requires prescription treatment (topical ivermectin, oral doxycycline) not available OTC."
+  • Severe atrophic scarring: if diagnostic notes mention ice pick, boxcar, or rolling acne scars → include note: "Atrophic scars are outside the non-prescription ceiling. Microneedling, fractional CO₂ laser, or subcision are the appropriate interventions — dermatologist referral recommended."
+  • Any suspected skin cancer indicator: mole described as new, changing, or irregular → STOP protocol and refer immediately. STRION is not a medical diagnostic tool.
+  • Note: persistent PIH unresponsive after the 90-day protocol should be flagged at Day 90 checkpoint for dermatology referral — do not promise full resolution in initial protocol.
+
+─── SKIN TONE UNIFORMITY ROUTING (STU / post-acne marks) ───
+
+  If STU disruption is detected (post-acne PIH/PIE marks, uneven tone) OR tier_skin < 55 with notes indicating pigmentation:
+
+  • Fitzpatrick II–IV + PIH + PIE present (brown + red marks):
+    - S13 (Tranexamic Acid) is MANDATORY — highest-ROI dual-action active for this profile.
+    - Stack with S4 (Niacinamide) — synergistic (different mechanisms).
+    - Upgrade SPF to SPF 50+ (elevated urgency — any UV re-darkens marks).
+    - S14 (Vitamin C) from Week 3 adds anti-pigmentary + antioxidant layer.
+
+  • Fitzpatrick III–V + PIH dominant (brown marks):
+    - S16 (Alpha-Arbutin) is MANDATORY from Week 3.
+    - Stack with S4 (Niacinamide) and S13 (Tranexamic Acid) for triple-mechanism approach.
+    - SPF 50+ mandatory — PIH resolution is entirely undermined by UV.
+    - PIH resolution timeline is slow (6–12 months) — communicate honest ceiling in focus_note at Week 1.
+
+  • PIE dominant (red/purple marks, Fitzpatrick I–III):
+    - Alcohol reduction (F4) is directly relevant — alcohol-induced vasodilation significantly darkens and prolongs PIE. Include F4 if user reports alcohol consumption.
+    - S13 (Tranexamic Acid) addresses PIE via vascular component.
+
+  • Pseudofolliculitis barbae (shaving-induced PIH along beard line, Fitzpatrick III–VI):
+    - S16 (Alpha-Arbutin) targets this specifically.
+    - S9 (Ceramide moisturizer) + S15 (Post-shave barrier repair) reduce ongoing mechanical trigger.
+
+─── FITZPATRICK-DEPENDENT SKIN ROUTING ───
+
+  Read fitzpatrick_estimate before building any skin protocol.
+
+  • Fitzpatrick I–II:
+    - Higher rosacea risk — if FR score is high + no acne etiology, trigger dermatology referral note.
+    - PIE (red marks) is more visible and a primary tracking variable.
+    - S3 (SPF) framing: emphasize cancer prevention + photoaging prevention (primary male motivators for this type).
+    - Mineral sunscreen (zinc oxide / titanium dioxide) preferred for post-shave — less likely to sting disrupted barrier.
+
+  • Fitzpatrick III–IV:
+    - PIH contrast is highest in this range — STU disruption is most photographically impactful.
+    - S16 (Alpha-Arbutin) and S13 (Tranexamic Acid) have strongest evidence in this range.
+    - Pseudofolliculitis barbae along beard line is common — address if beard_present = true.
+
+  • Fitzpatrick V–VI:
+    - ⚠️ DO NOT track FR (facial redness) via photo — melanin masks hemoglobin signal. Remove FR from tracked variables.
+    - PIH is the primary STU driver but has lower contrast vs surrounding skin — communicate this limitation.
+    - Erythema from acne (PIE) is not reliably assessable photographically — track ACL (lesion count) instead of redness as the primary acne variable.
+    - Post-inflammatory marks: alpha-arbutin (S16) + niacinamide (S4) + aggressive SPF is the standard stack.
+
+  ─── SMOKING ROUTING ───
+
+  If user reports smoking in questionnaire:
+  • DO NOT prescribe S14 (Vitamin C L-Ascorbic Acid) — smoke-induced ROS immediately depletes applied L-AA, rendering the intervention ineffective. Defer S14 until smoking cessation is confirmed or underway.
+  • Add note to all antioxidant practices: "Smoking significantly reduces efficacy of all antioxidant interventions — cessation is the highest-ROI skin intervention available."
+  • Acne users who smoke: all topical treatments underperform due to impaired wound healing and elevated systemic ROS. Communicate this ceiling honestly in the protocol context.
+  • Skin texture and luminosity improvement ceilings are significantly reduced for active smokers — smoking-induced collagen degradation outpaces the rate of retinoid-stimulated repair in chronic smokers.
+
+─── BEARD SKIN MANAGEMENT ROUTING (beard_present = true) ───
+
+  Bearded users require a split protocol: beard-zone skin care + face skin care are separate tracks.
+
+  • Beard-zone specific needs:
+    - Sebum + debris accumulates at follicle bases under beard → comedone formation + C. acnes colonization.
+    - Prescribe S1 (gentle cleanser) with explicit note: "Massage cleanser into beard base, not just surface — reaches follicle zone."
+    - Recommend serum formats over heavy creams for under-beard actives (penetration through beard).
+    - S4 (Niacinamide) and S5 (BHA) in serum format can penetrate beard follicle channels; S6 (BPO) and S7 (retinoid) have highly variable penetration through dense beard.
+    - If beard_present = true AND acne_subtype = comedonal or inflammatory: add task label note "Apply BHA/BPO serum at beard base before grooming, not over beard surface."
+
+  • Neck zone (partial shaving):
+    - Users who shave neck only require S15 (post-shave barrier repair) for the neck zone.
+    - S6 or S5 actives prescribed for the face should be noted as "apply to face skin between beard areas, not to beard-covered zones."
+
+─── COMPROMISED BARRIER ROUTING ───
+
+  If skin notes indicate compromised barrier (flaking, dehydration lines, stinging from products, visible dryness or peeling):
+
+  • HARD STOP ON ACTIVES: Do NOT prescribe S5 (BHA), S6 (BPO), S7 (retinoid), or S14 (Vitamin C) until barrier is restored.
+  • Phase 1 for this user is EXCLUSIVELY: S1 (gentle cleanser, water rinse AM only) + S9 (ceramide barrier repair moisturizer on damp skin) + S3 (mineral SPF — ZnO/TiO2, less likely to sting).
+  • Barrier recovery timeline: 2–4 weeks. First actives can be introduced from Week 3 at earliest — start with S4 (niacinamide, gentlest active) only.
+  • Retinoid introduction (S7) is deferred to Week 7 minimum for compromised barrier profiles — ceramide sandwich technique mandatory when introduced.
+  • Focus_note for Weeks 1–2: "Barrier restoration precedes all actives — this is the foundation phase. Smooth, comfortable skin is the Week 4 milestone."
+
+─── POST-WORKOUT CLEANSE PROTOCOL ───
+
+  If user reports training frequency ≥ 3×/week AND acne_subtype ≠ none:
+  Add this as a task note within S1 (cleansing protocol):
+  • "Cleanse face within 30 minutes of completing any workout. Rationale: sweat + sebum pooling shifts skin pH from its protective 4.5–5.5 acid mantle toward alkaline, creating optimal C. acnes growth conditions. The 30-minute window prevents significant colonization."
+  • If user also consumes whey protein + has inflammatory acne: reference S8 note on whey-to-plant-protein switch trial.
+
 ─── DARK CIRCLE TYPE (dark_circle_type) ───
   • "vascular": Prescribe S10 (caffeine eye cream) + F3 (sodium reduction) + F2 (sleep).
   • "pigmentary": Prescribe S4 (niacinamide) — double-duty: pigmentation + tone. No caffeine cream needed.
   • "none": No periorbital-specific intervention needed.
+  • Regardless of dark_circle_type: F4 (alcohol reduction) should be included for any user reporting regular alcohol consumption — alcohol-induced vasodilation significantly darkens and prolongs periocular vascular marks (acute effect the morning after).
 
 ─── SCOLIOSIS SAFETY FLAG (scoliosis_safety_flag) ───
   • If TRUE: DO NOT prescribe P12 (dead hang) under any circumstances.
@@ -434,7 +549,7 @@ PRIORITIZATION LOGIC:
   • Lowest-scoring tiers get the most protocol attention.
   • If tier_posture < 55 AND posture notes suggest FHP ONLY (no kyphosis indicators): front-load P1, P2, P3, P4, P8, P14 in Weeks 1–2.
   • If tier_posture < 55 AND posture notes suggest FHP + kyphosis: follow proximal-before-distal sequencing — front-load P4, P5, P8, P14 in Weeks 1–2; add P6, P13, P10 in Weeks 3–6; add P1, P3 in Weeks 7–9 minimum.
-  • If tier_skin < 55: front-load S1, S2, S3 in Week 1; add acne-specific active in Week 2.
+  • If tier_skin < 55: front-load S1, S2, S3 in Week 1; add acne-specific active in Week 2. If skin_notes indicate a dominant non-acne concern: dullness/luminosity → prioritize S7 (retinoid) + S14 (Vitamin C) over other actives; pore visibility → S5 BHA is the primary active (penetrates sebum-filled pores); excess sebum/oiliness → S4 niacinamide + S5 BHA as primary combo; surface texture (rough, uneven) → S5 AHA glycolic + S7 retinoid. These sub-variable priorities are secondary to acne_subtype routing — if acne is active, clear it first.
   • If tier_grooming < 55: front-load G1 or G9 + G2 + G7 in Week 1.
   • If tier_body < 55: introduce body phenotype-appropriate nutrition in Week 1; B17 (LISS aerobic) from Week 1 for fat-loss profiles; B12 + B1 from Week 2.
   • If tier_face < 55: front-load F6 (oral posture) + F2 (sleep) in Week 1. If body_phenotype ≠ ectomorph, cross-reference B5 + B17 as the primary face interventions with explicit note. Add F5 in Week 5 only — never before.
