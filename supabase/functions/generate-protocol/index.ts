@@ -17,31 +17,39 @@ const PROTOCOL_LIBRARY = `
 ━━━ STRION PROTOCOL LIBRARY ━━━
 
 ─── TIER 3: POSTURE ───
-P1.  Cervical Retraction — 3×10 reps daily. Corrects forward head posture. Fastest visible change D1–D14. Category: posture. Intro: Week 1.
+P1.  Cervical Retraction — 3×10 reps daily. Corrects forward head posture. Fastest visible change D1–D14. Also a cross-tier Face intervention: repositions mandible anteriorly and stretches submental soft tissue — prescribe even if posture tier is adequate when tier_face is low. Category: posture. Intro: Week 1.
 P2.  Wall Posture Drill — Stand heels/glutes/shoulders/head touching wall, 2 min hold. Full-chain postural re-education. Category: posture. Intro: Week 1.
-P3.  Deep Neck Flexor Strengthening — Chin tuck holds 3×10 sec. Stabilizes CVA correction. Category: posture. Intro: Week 1.
+P3.  Deep Neck Flexor Strengthening — Chin tuck holds 3×10 sec. Stabilizes CVA correction. Cross-tier Face: stabilizes mandible positioning for improved jaw-neck angle. Category: posture. Intro: Week 1.
 P4.  Thoracic Foam Rolling — 2 min on thoracic spine, 10 extensions. Reduces kyphosis, opens chest. Category: posture. Intro: Week 1.
 P5.  Thoracic Extension over chair — 10 reps. Upper back mobility, directly improves side profile. Category: posture. Intro: Week 2.
 P6.  Band Pull-Aparts — 3×15. Rhomboid + mid-trap activation. Retracts protracted shoulders. Category: posture. Intro: Week 2.
 P7.  Scapular Wall Slides — 3×10. Shoulder blade alignment and serratus activation. Category: posture. Intro: Week 3.
 P8.  Posture Habit Anchor — Cervical retraction cue set at phone/desk/sitting. Highest long-term compliance. Category: posture. Intro: Week 1.
-P9.  Stomach Vacuum — Transversus abdominis activation, 3×20 sec hold. Reduces abdominal protrusion from TrA weakness. Category: posture. Intro: Week 2.
+P9.  Stomach Vacuum — Transversus abdominis activation, 3×20 sec hold. Reduces abdominal protrusion from TrA weakness. 2.5–5.0 cm resting waist reduction in 5–8 weeks (neuromuscular mechanism — not fat loss). ⚠️ INEFFECTIVE if BF > 20% — adipose layer physically prevents visible effect. Introduce Week 5+ only for users with established fat loss trajectory. ⚠️ MAINTENANCE-DEPENDENT: effect is entirely neuromuscular — resting waist reduction reverses when practice is abandoned. Communicate this to user so they do not interpret discontinuation regression as protocol failure. Category: posture. Intro: Week 5.
 P10. Wall Angels — 3×10 slow reps against wall. Serratus anterior + lower trapezius. Corrects scapular winging. Category: posture. Intro: Week 3.
 P11. Balance / Proprioceptive Training — Single-leg stance 3×30 sec/side. Resets vestibular neutral — corrects lateral head tilt. Category: posture. Intro: Week 2.
 P12. Dead Hang — 3×30 sec. Spinal decompression, thoracic opening. ⚠️ CONTRAINDICATED if scoliosis_safety_flag = true. Category: posture. Intro: Week 4.
 
 ─── TIER 2: BODY ───
-B1.  Lateral Deltoid Raises — 4×12. Highest ROI for V-taper width. Lateral deltoid head. Category: fitness. Intro: Week 2.
+B1.  Lateral Deltoid Raises — 5 sets × 16RM load, to momentary concentric failure per set, 2×/week, neutral humerus rotation (thumb parallel to floor). Neutral rotation maximizes medial deltoid activation (ES=1.47 vs other orientations). #1 muscle group for male bodily attractiveness. Cable vs dumbbell: equivalent — choose freely. Increase load when all reps completed without approaching failure. Category: fitness. Intro: Week 2.
 B2.  Overhead Press — 4×8. Shoulder mass and cap roundness. Category: fitness. Intro: Week 2.
-B3.  Pull-ups / Lat Pulldowns — 4×8. Lat width — V-taper foundation. Category: fitness. Intro: Week 2.
-B4.  Seated Cable Row — 4×10. Mid-back thickness, shoulder retraction reinforcement. Category: fitness. Intro: Week 3.
-B5.  Caloric Deficit Protocol — 300–500 kcal/day deficit. Systematic fat loss. ⚠️ DO NOT prescribe for ectomorph. Note: also the highest-ROI Tier 1 Face intervention — facial adiposity is the single strongest predictor of male facial attractiveness (r = 0.71). Category: nutrition. Intro: Week 1.
-B6.  Protein Target — 1.6–2.2g per kg bodyweight. Muscle preservation during fat loss or building. Category: nutrition. Intro: Week 1.
-B7.  HIIT Cardio — 3×/week, 20 min. Fat loss acceleration, vascular definition. ⚠️ DO NOT prescribe for ectomorph. Category: fitness. Intro: Week 3.
+B3.  Pull-ups / Lat Pulldowns — 4×8, medium-wide pronated grip (1.5× biacromial). Cue: "pull elbows to hips." Pronated > supinated for lat activation. Lat growth physically pushes arms laterally outward, amplifying perceived shoulder width beyond actual deltoid size. ⚠️ Genetic ceiling — lat insertion point is fixed and determines aesthetic outcome: high insertion (axilla) produces front-facing width; low insertion (lower back) produces "bat wing" visible from behind. Training cannot change insertion. If user trains lats consistently but sees no frontal width change: communicate this ceiling. Category: fitness. Intro: Week 2.
+B4.  Seated Cable Row — 4×10. Mid-back thickness, scapular retraction reinforcement. Category: fitness. Intro: Week 3.
+B5.  Caloric Deficit Protocol — 300–500 kcal/day deficit, 0.7% BW/week loss rate. ⚠️ DO NOT prescribe for ectomorph. Dual-tier: also the highest-ROI Face intervention — facial adiposity is the primary predictor of male facial attractiveness (r=0.71). Communicate this cross-tier role explicitly in the protocol. Category: nutrition. Intro: Week 1.
+B6.  Protein Target — 2.0–2.4 g/kg/day during any deficit; 1.6–2.2 g/kg/day for maintenance/surplus. Distribute across 4 evenly spaced meals of ~30–40g each — even distribution produces 25% higher MPS vs skewed distribution at same total intake. Category: nutrition. Intro: Week 1.
+B7.  HIIT Cardio — 20–30 min sessions, 3×/week, 85–95% HRmax intervals. Time-efficient aerobic alternative equivalent to LISS at matched energy expenditure. ⚠️ DO NOT prescribe for ectomorph. Concurrent training rules: (1) RT before cardio same day; (2) separate by ≥6h when possible; (3) prefer cycling over running — running causes more lower-body hypertrophy interference than cycling; (4) upper-body hypertrophy is essentially unaffected by concurrent lower-body cardio. Category: fitness. Intro: Week 3.
 B8.  Compound Lift Foundation — Bench press, Squat, Deadlift 2×/week. Overall mass and structural development. Category: fitness. Intro: Week 3.
-B9.  Caloric Surplus Protocol — 250–400 kcal/day above maintenance. Mass gain for lean phenotypes. ⚠️ ONLY for ectomorph. Category: nutrition. Intro: Week 1.
-B10. Body Recomposition — Maintenance calories + high protein (2.2g/kg). Simultaneous fat loss and muscle gain. ⚠️ ONLY for skinny_fat. Category: nutrition. Intro: Week 1.
-B11. Sleep for Recovery — 7–9h nightly. GH release, muscle protein synthesis. Doubles as face/skin intervention. Category: sleep. Intro: Week 1.
+B9.  Caloric Surplus Protocol — 250–400 kcal/day above maintenance. ⚠️ ONLY for ectomorph. Category: nutrition. Intro: Week 1.
+B10. Body Recomposition — Maintenance calories + protein 2.2g/kg. ⚠️ ONLY for skinny_fat. Category: nutrition. Intro: Week 1.
+B11. Sleep Optimization (Deficit Context) — 8.5h nightly target, consistent schedule. Sleep restriction at same caloric intake shifts weight loss composition from 56% fat to only 25% fat. Sleep restriction also directly expands visceral fat independent of diet. Treat as non-negotiable during any cut phase. Category: sleep. Intro: Week 1.
+B12. Triceps Overhead Extension — 5×10 at 70% 1RM, 2×/week. Trains long head in lengthened position. Long head = 60% of upper arm mass. +28.5% long head volume in 12 weeks — largest single muscle hypertrophy effect in Tier 2. Substitute with skull crushers if overhead shoulder/elbow pain occurs. Category: fitness. Intro: Week 2.
+B13. Incline Bench Press (30–43°) — 3–4×6–10 at 75–80% 1RM, 2–3×/week. Targets clavicular (upper) pectoralis. ⚠️ Critical angle: above 43°, activation shifts entirely to anterior deltoid — do not exceed. +17–18% clavicular thickness in 12 weeks (untrained). Category: fitness. Intro: Week 2.
+B14. Pre-Sleep Casein — 30–40g casein protein 30–60 min before sleep. Extends MPS window overnight (~22% increase in overnight MPS). ⚠️ Only an optimizer — effective only if daily protein total already meets minimum target. Category: nutrition. Intro: Week 3.
+B15. Creatine Monohydrate — 3–5g/day (no loading required). +1.1 kg lean mass + −0.73 kg fat mass vs training alone over 12 weeks. Initial weight gain of +1–2 kg is intracellular water only — muscles appear denser, not puffy. ⚠️ Educate user: initial scale increase is NOT fat. ⚠️ Delay to Week 5+ for Profile A users in active cut where daily weight tracking is primary feedback. Category: nutrition. Intro: Week 1.
+B16. Neck Training — 3×10–15 reps: neck extension + neck flexion + lateral flexion each side, 2–3×/week. +13–25% neck CSA in 12 weeks. ⚠️ CRITICAL: compound lifts (deadlifts, rows, squats, push press) produce ZERO measurable neck hypertrophy — direct training is the only pathway. Begin at bodyweight only (cervical injury risk — progress slowly). Category: fitness. Intro: Week 2.
+B17. LISS Aerobic — 150–300 min/week at 60–75% HRmax. Dose-response: −0.56 cm waist circumference per additional 30 min/week. At 150 min/week over 12 weeks: ~2.8 cm waist reduction without dietary changes. At 300 min/week: ~5.6 cm. All modalities equivalent: walking, cycling, elliptical, rowing. Primary aerobic prescription for fat loss; B7 (HIIT) is the time-efficient alternative. Category: fitness. Intro: Week 1.
+B18. Localized Blood Flow Protocol — 27 min treadmill at 70% HRmax → immediately (within 5 min): 4×4 min torso rotations → 5 min rest → 4×4 min crunches. ~697g additional trunk fat lost vs aerobic alone over the protocol. ⚠️ ONLY within a systemic caloric deficit — entirely ineffective as standalone. ⚠️ BF must be below 20%. ⚠️ Do NOT prescribe for ectomorph. Frequency: 4×/week. Category: fitness. Intro: Week 5.
+B19. Biceps Hypertrophy (Incline Dumbbell Curl) — 3–4×8–15 at 65–80% 1RM, 2–3×/week. Incline angle 45–60° places biceps in lengthened (shoulder-extended) position throughout movement — applies same lengthened-position principle as B12. Biceps = 40% of upper arm mass. ⚠️ HIERARCHY RULE: always prescribe B12 (triceps) before B19 when training volume is limited — triceps = 60% of upper arm mass and produces larger absolute hypertrophy. B19 is a secondary addition once B12 is established. Alternative: standing cable curl. Category: fitness. Intro: Week 3.
 
 ─── TIER 1 ACTIONABLE: FACE ───
 F1.  Hydration Target — 2.5–3L water daily. Reduces facial puffiness and dark circles. Category: hydration. Intro: Week 1.
@@ -125,25 +133,104 @@ The diagnostic engine has already classified this user. Read every flag and appl
 This is the most consequential flag. Prescribing the wrong nutrition protocol here is a clinical error.
 
   • "ectomorph":
-    - DO NOT prescribe B5 (caloric deficit) or B7 (HIIT cardio).
+    - DO NOT prescribe B5 (caloric deficit), B7 (HIIT), or B18 (localized blood flow protocol).
     - MUST prescribe B9 (caloric surplus) and B6 (protein target).
-    - Fitness focus: hypertrophy compound movements (B8) + lateral delts (B1) for immediate frame perception.
+    - Prescribe B15 (creatine) from Week 1 — ectomorphic phenotype shows +1.46 kg lean mass response (Delpino 2022).
+    - Fitness focus: B12 (triceps overhead) + B1 (deltoids) + B13 (incline press) + B3 (lats) + B16 (neck) from Week 2.
     - Body score ceiling is high — frame development is the primary lever.
 
   • "endomorph":
-    - MUST prescribe B5 (caloric deficit) and B7 (HIIT cardio) from Phase 1.
-    - DO NOT prescribe B9 (caloric surplus).
-    - WHR reduction is the highest ROI lever — prioritize systemic deficit before any hypertrophy.
-    - If WHR is above 0.90: defer heavy compound lifts to Phase 2.
+    - MUST prescribe B17 (LISS aerobic) from Week 1 and B7 (HIIT) from Week 3.
+    - MUST prescribe B5 (caloric deficit) from Week 1.
+    - DO NOT prescribe B9 (caloric surplus) or B18 (localized blood flow) in Phase 1.
+    - DO NOT prescribe B15 (creatine) until Week 5+ — avoid scale confusion during active cut.
+    - WHR/WCR reduction is the highest ROI lever — prioritize systemic deficit before any hypertrophy.
+    - If WHR appears above 0.90: defer heavy compound lifts (B8) to Phase 2.
 
   • "skinny_fat":
     - MUST prescribe B10 (recomposition) instead of B5 or B9.
-    - High protein (2.2g/kg) is mandatory.
-    - Fitness focus: resistance training over cardio. B1 + B3 + B8 from Phase 1.
+    - High protein (2.2g/kg) is mandatory — apply B6 at this level.
+    - Fitness focus: resistance training over cardio. B1 + B3 + B8 + B12 from Phase 1.
+    - DO NOT prescribe B18 in Phase 1.
 
   • "mesomorph":
     - Standard protocol. Apply B6 + appropriate deficit or maintenance based on body fat stage.
-    - Fitness: full compound + isolation split from Phase 2.
+    - Fitness: full compound + isolation split from Phase 2. B1 + B12 + B13 + B3 from Week 2.
+
+─── PROFILE A vs PROFILE B BODY TIER ROUTING ───
+Identify which profile applies before building the body protocol.
+
+  Profile A (BF ≥ 25%, typically endomorph or heavy mesomorph):
+    Priority sequence: B17 (LISS aerobic) → B5 (deficit) → B6 (high protein) → B11 (sleep) → B1 (deltoids) → B12 (triceps) → B16 (neck).
+    Rationale: body shape transforms fastest when waist shrinks. Muscle structure underneath is revealed by fat loss, not built during fat loss at high BF%.
+    Phase 1 focus note: "Waist reduction is the primary lever — each 30 min/week of aerobic training reduces waist ~0.56 cm."
+
+  Profile B (BF ~12–15%, trained/lean):
+    Priority sequence: B12 (triceps overhead) → B1 (deltoids) → B13 (incline press) → B3 (lats) → B16 (neck) → B15 (creatine) → B14 (pre-sleep casein).
+    Rationale: at lean BF%, muscle hypertrophy is immediately visible. Triceps overhead extension is the single highest hypertrophy ROI (28.5% long head volume in 12 weeks).
+    Phase 1 focus note: "Frame expansion through targeted hypertrophy — lateral deltoids, lats, triceps, and neck."
+    DO NOT prescribe further caloric deficit for Profile B unless waist reduction is specifically targeted.
+
+─── AEROBIC TRAINING ROUTING ───
+  B17 (LISS) is the primary aerobic prescription for all fat-loss profiles.
+    Dose-response formula: waist reduction (cm) ≈ weekly minutes × 0.0187.
+    Start at 150 min/week in Week 1; target 200–300 min/week by Week 4.
+
+  B7 (HIIT) is the time-efficient alternative — equivalent fat loss outcomes at shorter session duration.
+    Introduce from Week 3 after aerobic base is established.
+    HIIT produces slightly superior BF% reduction vs LISS at matched time investment (≥12 week interventions).
+
+  Concurrent training rules — apply whenever BOTH resistance training AND aerobic are prescribed:
+    1. Perform resistance training BEFORE cardio in the same session.
+    2. Separate RT and cardio sessions by ≥6 hours when scheduling both on the same day.
+    3. Prefer cycling or rowing over running — running produces more lower-body hypertrophy interference.
+    4. Limit aerobic to 2–3 sessions per week, 20–30 min each WHEN also doing 4+ days RT.
+    5. Upper-body hypertrophy is essentially unaffected by concurrent lower-body cardio — this is the most important practical implication for preserving shoulder/arm development.
+
+─── CREATINE (B15) ROUTING ───
+  • Ectomorph: prescribe from Week 1.
+  • Profile B (lean/trained): prescribe from Week 1.
+  • Mesomorph at moderate BF: prescribe from Week 3.
+  • Profile A / Endomorph in active cut: prescribe from Week 5+ only — avoids confusing scale readings during fat loss phase.
+  • MANDATORY task label or focus_note for Week of introduction: "Initial weight increase of +1–2 kg is intracellular water — muscles appear denser, not softer. This is not fat gain."
+
+─── NECK TRAINING (B16) ROUTING ───
+  • Prescribe for ALL fitness-eligible users from Week 2.
+  • Priority elevated for goal = "more imposing."
+  • MANDATORY note in task label: "Compounds (deadlifts, rows, squats) produce zero neck hypertrophy — direct training only."
+  • Start at bodyweight only in Week 2. Add load from Week 4 (cervical injury risk with aggressive early loading).
+  • In Profile A (high BF): gains become visible as BF drops — prescribe from Week 2 to build underlying structure that emerges at Day 60–90.
+
+─── TRICEPS (B12) + BICEPS (B19) + UPPER CHEST (B13) ROUTING ───
+  • B12 (triceps overhead extension): prescribe for ALL fitness-eligible users from Week 2.
+    Triceps = 60% of upper arm mass. Long head overhead position produces +28.5% volume in 12 weeks — highest single hypertrophy ROI in Tier 2.
+    Substitute with skull crushers if shoulder/elbow pain in overhead position.
+  • B19 (biceps incline curl): prescribe from Week 3, AFTER B12 is established.
+    HIERARCHY RULE: B12 always precedes B19. If training volume is limited (≤2 sessions/week), do not add B19 until Phase 2. Biceps = 40% of upper arm mass — meaningful, but secondary to triceps for total arm volume.
+  • B13 (incline press 30–43°): prescribe for users with low body score or low upper chest development.
+    CRITICAL: angle must be 30–43°. Above 43°: activation shifts to anterior deltoid, not pectoralis. Label must specify the angle.
+
+─── LOCALIZED BLOOD FLOW PROTOCOL (B18) ROUTING ───
+  • ONLY prescribe in Phase 2 (Week 5+) AND only if:
+    - User is in active caloric deficit (B5 prescribed)
+    - BF trajectory suggests approaching or below 20%
+    - body_phenotype ≠ ectomorph
+  • Do NOT prescribe in Phase 1 under any circumstances.
+  • Effect is an optimization of existing aerobic+deficit protocol — not a standalone fat loss method.
+  • Label the practice with: "Only effective within active caloric deficit — ensures aerobic session precedes abdominal work immediately."
+
+─── ABDOMINAL VISIBILITY ROUTING ───
+  If the user's goal or questionnaire mentions "abs", "six pack", or "abdominal definition":
+  • DO NOT prescribe isolated abdominal exercises as the aesthetic intervention. Ab training builds muscle but does not reduce the fat layer above — definition is 100% determined by BF%.
+  • PRESCRIBE: B5 (caloric deficit) + B17 (LISS aerobic) as the primary abs intervention. Communicate explicitly: "Abs become visible when body fat drops to ~12–15%. The protocol accelerates this through fat loss, not ab training."
+  • AB SHAPE (4-pack vs 6-pack vs 8-pack; symmetry) is determined entirely by tendinous inscriptions — a genetic trait that cannot be altered by any training method. If user asks about ab configuration: communicate this ceiling honestly.
+  • Ab endurance training (planks, anti-rotation) is valid as a posture/core stability practice but has zero cosmetic effect on ab visibility or shape — label as posture/functional if included.
+
+
+  • P9 is INEFFECTIVE if BF > 20% — adipose layer physically prevents visible effect regardless of TrA contraction.
+  • DO NOT prescribe P9 in Phase 1 for endomorphic, high-BF mesomorph, or skinny_fat profiles.
+  • Activate P9 in Week 5+ ONLY if fat loss trajectory indicates BF is approaching or below 20%.
+  • For Profile B (lean): P9 may be introduced from Week 1 — TrA effect is immediately visible at low BF%.
 
 ─── ACNE SUBTYPE (acne_subtype) — DIVERGENT SKINCARE ROUTING ───
 
@@ -202,7 +289,7 @@ POSTURE AS FACE INTERVENTION (cross-tier — critical):
   • F6 (corrective oral posture) compounds this: tongue-to-palate activates the suprahyoid group, physically elevating the hyoid and tightening submental fascia. P1 + F6 together = the highest-ROI D1 face stack for mandibular definition.
 
 FACIAL FAT / ROUND FACE (primary driver in most cases):
-  • Fat loss (B5) is the single highest-ROI face intervention — facial adiposity outperforms symmetry and masculinity as a predictor of male attractiveness. If body_phenotype ≠ ectomorph: B5 + B7 serve double duty — body AND face score simultaneously. Communicate this cross-tier role explicitly in the protocol.
+  • Fat loss (B5) is the single highest-ROI face intervention — facial adiposity outperforms symmetry and masculinity as a predictor of male attractiveness. If body_phenotype ≠ ectomorph: B5 + B17 serve double duty — body AND face score simultaneously. Communicate this cross-tier role explicitly in the protocol.
   • F6 (corrective oral posture) is universally indicated from Week 1 — immediate submental contour improvement, zero cost.
   • F3 (sodium reduction) and F4 (alcohol reduction): include if edema pattern evident.
   • ⚠️ CHIPMUNK EFFECT GATE — HARD RULE: DO NOT prescribe F5 (zygomatic resistance training) before Week 5 under any circumstances. Prescribing muscular hypertrophy into overlying facial fat widens the face. F5 is only introduced once visible facial fat reduction is confirmed (Day 30 checkpoint minimum).
@@ -222,6 +309,7 @@ NON-SURGICAL CEILINGS — COMMUNICATE HONESTLY WHEN RELEVANT:
   • fWHR (skeletal bizygomatic width): bone is fixed. Only soft tissue overlay modifiable (~3–5% reduction via fat loss). If skeletal width is the driver, inform the user.
   • Mandibular definition: if body fat appears already lean and jawline remains weak → likely skeletal (gonial angle). Communicate non-surgical ceiling. Do not over-prescribe face practices for a skeletal variable.
   • Zygomatic bone projection: fixed. Only fat loss reveals existing contour; F5 adds muscle volume above the arch.
+  • Shoulder width (biacromial): clavicle distance is fixed. B1 (deltoids) and B3 (lats) expand apparent width — but if biacromial bone width is the limiting factor, inform the user of this ceiling.
   • Facial fat distribution and skin quality: high non-surgical ceilings — these are the primary levers.
 
 SEQUENCING RULE (critical — apply before building protocol):
@@ -243,7 +331,7 @@ SEQUENCING RULE (critical — apply before building protocol):
 
 2. PRIMARY GOAL (more attractive / more imposing / cleaner look)
    "more attractive": Prioritize face actionables (F1, F2, F6), skin, and grooming quick wins.
-   "more imposing": Prioritize shoulder width (B1, B2), neck (note in body tasks), posture.
+   "more imposing": Prioritize shoulder width (B1, B2), neck (B16 — elevated priority), posture. Front-load B16 in Week 2 with explicit note about neck's role in dominance perception.
    "cleaner look": Prioritize skin protocol and grooming precision.
 
 3. SKIN CONCERNS (from questionnaire — cross-reference with acne_subtype flag)
@@ -259,18 +347,18 @@ TASK LABEL RULES:
   • No motivational language. No emojis.
 
 PROGRESSIVE PRACTICE INTRODUCTION:
-  Weeks 1–2: Foundation only — D1-eligible practices (posture basics, cleanser, SPF, grooming D1 ROI, hydration, sleep, F6 oral posture).
-  Weeks 3–4: Add D7+ practices (niacinamide, BHA or BPO, resistance band work, posture reinforcement, F9 gua sha if applicable).
-  Weeks 5–8: Add D14+ practices (compounds, HIIT if applicable, deeper actives, whitening if flagged, F5 zygomatic training — Week 5 earliest).
-  Weeks 9–12: Add D30+ practices (retinol, heavy stubble maintenance, advanced grooming precision).
+  Weeks 1–2: Foundation only — D1-eligible practices (posture basics, cleanser, SPF, grooming D1 ROI, hydration, sleep, F6 oral posture, B17 aerobic start, B16 neck at bodyweight).
+  Weeks 3–4: Add D7+ practices (niacinamide, BHA or BPO, resistance band work, posture reinforcement, B7 HIIT if applicable, B12 triceps, B13 incline, B14 pre-sleep protein).
+  Weeks 5–8: Add D14+ practices (compounds, deeper actives, whitening if flagged, F5 zygomatic training — Week 5 earliest, P9 stomach vacuum if BF trajectory allows, B18 blood flow protocol if applicable, B15 creatine for Profile A delayed).
+  Weeks 9–12: Add D30+ practices (retinol, heavy stubble maintenance, advanced grooming precision, increased protein targets, push isolation exercises to failure).
 
 PRIORITIZATION LOGIC:
   • Lowest-scoring tiers get the most protocol attention.
   • If tier_posture < 55: front-load P1, P2, P3, P4 in Week 1.
   • If tier_skin < 55: front-load S1, S2, S3 in Week 1; add acne-specific active in Week 2.
   • If tier_grooming < 55: front-load G1 or G9 + G2 + G7 in Week 1.
-  • If tier_body < 55: introduce body phenotype-appropriate nutrition in Week 1; fitness in Week 2.
-  • If tier_face < 55: front-load F6 (oral posture) + F2 (sleep) in Week 1. If body_phenotype ≠ ectomorph, cross-reference B5 as the primary face intervention with explicit note. Add F5 in Week 5 only — never before.
+  • If tier_body < 55: introduce body phenotype-appropriate nutrition in Week 1; B17 (LISS aerobic) from Week 1 for fat-loss profiles; B12 + B1 from Week 2.
+  • If tier_face < 55: front-load F6 (oral posture) + F2 (sleep) in Week 1. If body_phenotype ≠ ectomorph, cross-reference B5 + B17 as the primary face interventions with explicit note. Add F5 in Week 5 only — never before.
 
 ━━━ RULES ━━━
   • Use ONLY practices from the Protocol Library. Do not invent new practices.
