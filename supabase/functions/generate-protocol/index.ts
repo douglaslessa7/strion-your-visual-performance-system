@@ -96,20 +96,35 @@ S15. Post-shave Barrier Repair — Within 2 minutes of shaving: apply barrier-re
 S16. Alpha-Arbutin 1–2% — 1–2× daily. Competitive tyrosinase inhibition → PIH reduction. More stable and less cytotoxic than hydroquinone. Arruda 2022 RCT (n=58, Fitzpatrick III–V): significant PIH reduction vs vehicle. ⚠️ PRIMARY for Fitzpatrick III–V users with post-acne PIH and/or pseudofolliculitis barbae hyperpigmentation (shaving-induced PIH along beard line). EU regulatory update 2024 (SCCS 2024/996): max 2% in face products. MANDATORY SPF pairing. Category: skincare. Intro: Week 3.
 
 ─── TIER 5: GROOMING ───
-G1.  Beard Neckline Definition — Define at 2 finger-widths above Adam's apple. D1. Highest grooming ROI per minute. ⚠️ ONLY if beard_present = true. Category: grooming. Intro: Week 1.
+G1.  Beard Neckline Architecture — Place index and middle fingers horizontally above thyroid cartilage (Adam's apple); top edge of index finger = lowest permissible neckline. From this center anchor, draw a U-curve up toward each earlobe — never horizontal (creates chinstrap). Shave all hair below this line completely. Mechanism: creates a jaw shelf shadow that optically eliminates submental volume and defines mandibular border. Durgun 2021 anatomical standard. D1 execution — highest grooming ROI per minute. ⚠️ ONLY if beard_present = true. Pair with G15 (cheekline). Category: grooming. Intro: Week 1.
 G2.  Eyebrow Cleanup — Remove glabellar (between-brow) hair. D1. Photo-detectable immediately. Category: grooming. Intro: Week 1.
-G3.  Haircut Optimization — Cut aligned to face shape and fWHR. Calibrate to hair_texture_type. ⚠️ If dandruff_flag = true: treat scalp first, defer haircut recommendation to Week 3. Category: grooming. Intro: Week 1.
+G3.  Haircut Optimization by fWHR — Professional barber visit D1 with fWHR-specific brief. Low fWHR (<1.9): low taper fade, #2 guard at lowest point, 5–8cm on top styled horizontally — adds lateral width. Mid fWHR (1.9–2.1): mid fade, #1 at lowest, 6–10cm top versatile. High fWHR (>2.1): high skin fade from parietal ridge, 8–12cm+ top styled vertically (quiff/pompadour). Adapt for hair_texture_type: curly/coily hair shrinks up to 70% when dry — instruct barber to cut longer than target. Mechanism: 2 inches of vertical volume = 10–15% reduction in perceived fWHR. ⚠️ If dandruff_flag = true: defer to Week 3 — scalp treated first (G4). Follow G22 for maintenance frequency. Category: grooming. Intro: Week 1.
 G4.  Dandruff Treatment — Ketoconazole 2% shampoo 2×/week. 73% improvement by D7. ⚠️ MANDATORY and FIRST priority if dandruff_flag = true. Category: grooming. Intro: Week 1.
 G5.  Tooth Whitening Strips — 14% HP strips, 14-day cycle. ΔE ≥3.3 photo-detectable change. ⚠️ ONLY if dental_discoloration_flag = true. Category: grooming. Intro: Week 2.
-G6.  Heavy Stubble Maintenance — Maintain 7–10mm. Strongest evidence base for beard attractiveness (N=8,520). ⚠️ ONLY if beard_present = true, Intro Week 4+. Category: grooming. Intro: Week 4.
+G6.  Heavy Stubble Maintenance — Maintain 7–10mm with trimmer every 3–4 days. Allow 10 days of undisturbed growth from clean shave to reach target length first. Mechanism: exploits the masculinity paradox — heavy stubble maximizes attractiveness by signaling testosterone development while dampening negative aggression attributions of a full beard. Dixson 2013 (N=528) + Dixson 2016 (N=8,520): Cohen's d 0.4–0.7 over clean-shaven. Must be paired with G1 (neckline) + G15 (cheekline) + G16 (fWHR shaping) for full execution. ⚠️ ONLY if beard_present = true. ⚠️ NOT for B1 (absent) or severe patchiness without minoxidil protocol (G29). Category: grooming. Intro: Week 4.
 G7.  Daily Grooming Consistency Check — Mirror check: beard, hair, brows, lips, nasal area. D1. Category: grooming. Intro: Week 1.
 G8.  Fragrance — Daily application. Self-confidence mechanism. Non-photo-detectable but high in-person ROI. Category: grooming. Intro: Week 1.
 G9.  Clean Shave Optimization — Technique, razor quality, post-shave routine. ⚠️ ONLY if beard_present = false. Category: grooming. Intro: Week 1.
 G10. Nasal + Ear Hair Removal — Trim protruding nasal and/or ear hair. ⚠️ ONLY if flagged in diagnostic. D1. Category: grooming. Intro: Week 1.
 G11. Lip Hydration — Lip balm AM and PM, gentle exfoliation 2×/week. ⚠️ ONLY if chapping/flaking noted. Category: grooming. Intro: Week 1.
 G12. Resting Expression Awareness — Conscious relaxation of jaw and DAO (mouth corners). Mirror practice 2×/day. ⚠️ ONLY if resting_expression_flag = true. Category: grooming. Intro: Week 1.
-G13. Scalp Massage — 4 min daily. Supports hair follicle circulation. ⚠️ ONLY if hair_loss_flag = true. Category: grooming. Intro: Week 1.
-G14. Minoxidil 5% (topical) — Evidence-based hair retention/regrowth. ⚠️ ONLY if hair_loss_flag = true. Long-term commitment required. Category: grooming. Intro: Week 2.
+G13. Scalp Massage — 4–10 min daily: fingertips (not nails) pressing and STRETCHING the scalp skin laterally (5–10 lbs pressure), not creating friction against hair shafts. Cover all scalp regions: frontal hairline, vertex, occipital, temporal. Koyama 2016: +8.2% hair shaft thickness over 24 weeks (N=9). Companion: rosemary oil 2% solution (diluted in jojoba carrier, 2–4% concentration) applied to frontoparietal/vertex regions alongside massage — partial DHT inhibition + vasodilation (Panahi 2015: +6.8 hairs in measurement area at 6 months). No photo-detectable density result before D90 — frame as protective biological investment. ⚠️ ONLY if hair_loss_flag = true. Category: grooming. Intro: Week 1.
+G14. Topical Minoxidil 5% — Scalp hair retention/regrowth. Apply to frontoparietal and vertex regions 2×/day. Pharmaceutical ceiling reference: combined finasteride 1mg/day + minoxidil 5% yields shedding arrest >90% of men + 15–25% regrowth at 12 months (Gupta 2022 JAMA). Non-pharmaceutical protocol (G13 massage + rosemary) achieves <5% density preservation at 6 months. Long-term commitment required — results at D90+. ⚠️ ONLY if hair_loss_flag = true AND Norwood 1–3. For Norwood 4+: skip — prescribe G18 (cranial shaving) instead. Note: distinct from G29 (minoxidil 3% for beard growth). Category: grooming. Intro: Week 2.
+G15. Cheekline Definition — From tragus to lateral corner of mouth: remove all terminal hairs above this line using tweezers or precision trimmer. Restores bilateral upper brow symmetry. Universal technique — no fWHR modification. ⚠️ ONLY if beard_present = true. D1 execution. Frequency: every 7–10 days. Category: grooming. Intro: Week 1.
+G16. Beard Shaping by fWHR — Calibrate beard geometry to fWHR score. Low fWHR (<1.9): maximize density at gonial angle/jaw sides, trim chin short (10mm guard), style outward — increases apparent facial width. Mid fWHR (1.9–2.1): uniform heavy stubble 7–10mm, no geometric modification. High fWHR (>2.1): tight fade on sideburns and cheeks (3–5mm guard), grow chin hair to 15mm+ in a subtle vertical taper — elongates apparent face. ⚠️ ONLY if beard_present = true and beard density adequate (not absent/severe patchiness). Companion to G1 and G6. Category: grooming. Intro: Week 1.
+G17. Beard Oil & Conditioning — Post-shower: 3–5 drops jojoba or argan oil to slightly damp beard. Massage upward into skin beneath beard (prevents beardruff), stroke downward along shafts, distribute with boar-bristle brush. Effect is cosmetic only — reduces frizz, increases luster, eliminates beardruff. Zero density benefit. Avoid synthetic fragrances and silicone-heavy formulas. ⚠️ ONLY if beard_present = true. Category: grooming. Intro: Week 1.
+G18. Cranial Shaving — Advanced AGA (Norwood 4+) — Clip all remaining scalp hair to zero, then wet shave against grain for skin-level smoothness. Maintain every 48–72h. Daily: matte scalp moisturizer (avoid high-shine — reads as sweaty) + SPF 30+. Mechanism: eliminates horseshoe pattern aging signal; replaces with dominance signal. Mannes 2013 (N=344): +1 inch perceived height, +13% perceived physical strength vs. balding state. D1 transformation — most photo-detectable single intervention in Domain B. ⚠️ ONLY for advanced AGA (Norwood 4+). Do NOT prescribe for Norwood 1–3 (use G23 instead). Category: grooming. Intro: Week 1.
+G19. Hair Shaft Quality & Luster — Weekly: apply low-molecular-weight hydrolyzed keratin mask to damp hair, leave 15 min under shower cap, rinse. Daily styling: pea-sized dimethicone serum to distal half of damp hair before drying (never roots — causes buildup). Weekly clarifying sulfate shampoo before mask to strip accumulated silicone. Mechanism: keratin fills structural shaft gaps (tensile strength); silicone coats cuticle scales (shine, frizz). Photo-detectable: D14. Category: grooming. Intro: Week 1.
+G20. Washing Frequency by Scalp Type — Oily scalp / dandruff (C4): wash daily or every other day; alternate KTZ (G4) with gentle hydrating shampoo. Dry/sensitive scalp: wash every 3–4 days, sulfate-free formula only. Straight fine hair: daily to every other day. Straight medium/thick: every 2–3 days. Wavy: every 2–3 days, sulfate-free. Curly (Type 3): weekly moisturizing wash. Coily (Type 4): every 7–10 days, co-wash on interim days. Facial hygiene operates on its own schedule — daily face wash is independent of body/scalp shower frequency. Category: grooming. Intro: Week 1.
+G21. Styling Product by Hair Type & fWHR — Straight fine (1A): matte clay applied to dry hair, coin-sized. Straight medium/thick (1B/1C): matte paste or water-based pomade on damp or dry hair. Wavy (Type 2): paste or curl cream on damp hair + anti-humidity serum finish. Curly (Type 3): leave-in conditioner + alcohol-free gel on soaking wet hair, air-dry or diffuse. Coily (Type 4): curl cream or styling butter (shea/coconut) LOC method on soaking wet hair. fWHR override rule: Low fWHR (<1.9) = always style horizontally (no vertical lift, no height); High fWHR (>2.1) = always style vertically (maximum lift, no horizontal spread). Never use gel on fine or thinning hair — clumps shafts, exposes scalp. Category: grooming. Intro: Week 1.
+G22. Haircut Frequency & Structural Integrity — High fWHR (skin fade): professional barber every 2–3 weeks; at-home edge maintenance with #0/#0.5 guard on neckline only every 7–10 days — never touch the fade blend. Mid fWHR (mid fade): barber every 3–4 weeks; at-home #3 guard on lower sides only. Low fWHR (low taper): barber every 3–4 weeks; at-home #4 guard on sideburns/neckline only. Rationale: skin fade decays to functional degradation within 14 days — structural integrity loss is photo-detectable. Schedule barber visit 1–2 days before each STRION checkpoint for peak score. Category: grooming. Intro: Week 1.
+G23. AGA Haircut Optimization (Norwood 1–3) — High skin fade starting at parietal ridge (0mm sides blending into top). Keep 1–2 inches on top; style forward (textured crop/fringe) OR messy quiff. Product: matte clay applied dry ONLY — gel is absolutely contraindicated (clumps thin shafts, creates scalp gaps, worsens perceived density). Mechanism: eliminates contrast between thinning top and denser sides — optically negates 3–5 years of perceived AGA progression. Maintain every 2 weeks to sustain contrast-elimination. ⚠️ ONLY for hair_loss_flag = true AND Norwood 1–3. For Norwood 4+: prescribe G18 instead. Category: grooming. Intro: Week 1.
+G24. Lower Brow Definition — Canthal Tilt Enhancement — Brush brows upward with spoolie to reveal sub-arch strays. Remove only isolated terminal hairs below the dense brow core on the lateral half (eye midpoint outward to temple). Target: 3–5mm of clear skin between brow body and eyelid crease. Remove 1–3 hairs at a time, reassess. Never remove from dense brow core — creates feminized brow (Cohen's d masculinity penalty). Mechanism: raises perceived brow anchor above outer eye → 1–3° improvement in perceived canthal tilt. Frequency: every 14–21 days. Category: grooming. Intro: Week 1.
+G25. Eyebrow Asymmetry Correction — Dual-brow technique: pluck 1–3 hairs from TOP margin of higher brow (lowers perceived position) AND 1–3 hairs from BOTTOM margin of lower brow (raises perceived position) — simultaneously, never same direction on both. Increment: 1–2 hairs per session, photograph and reassess. Target: <1.5mm residual vertical displacement (below conscious detection threshold). Rationale: FA >3mm consciously detected by 37% of raters. ⚠️ ONLY if diagnostic notes visible brow asymmetry. Frequency: corrections as needed D1–D14; maintenance every 14–21 days. Category: grooming. Intro: Week 1.
+G26. Halitosis Protocol — Tongue scraping 2×/day (morning and evening, after brushing): place scraper at posterior-most comfortable point of dorsum, apply firm pressure, pull forward 3–4 passes, rinse between each. Immediately follow with 30-sec CPC 0.05% mouthwash (not CHX — causes dental staining long-term). Mechanism: removes VSC-producing anaerobic bacteria from posterior tongue dorsum. Cohen's d = 0.74–0.92 VSC reduction vs. toothbrushing alone. Non-photo-detectable but eliminates a high-weight social penalty. Category: grooming. Intro: Week 1.
+G27. Body Hygiene — High Sweat Profile (H1) — Primary: clinical-strength antiperspirant (15–20% AlCl₃) applied to COMPLETELY DRY underarms at bedtime; leave 6–8h; wash off in morning. Induction: nightly × 2 weeks → maintenance 1–2×/week. Critical: dry skin is essential — moisture prevents AlCl₃ polymerization inside sweat ducts. Secondary: daily shower with BPO 5% or tea tree oil body wash (focus axillae, groin). Post-shower: lightweight non-comedogenic body lotion to damp skin. Fabric: cotton/linen/merino wool — avoid polyester. Effect: 82–87% eccrine output reduction at D14. ⚠️ ONLY if hyperhidrosis or significant visible sweat staining noted. Category: grooming. Intro: Week 1.
+G28. Nail Maintenance — Post-shower weekly: clip fingernails straight across leaving ~1mm white edge; file edges in one direction only (never saw back-and-forth — causes shaft delamination); push cuticles back gently with dry towel — do NOT cut cuticles (infection risk); clean subungual debris. Apply hand lotion after. Toenails: every 2–3 weeks, straight across (prevents ingrown nails). Category: grooming. Intro: Week 1.
+G29. Topical Minoxidil 3% — Beard Growth (B1/B2 profiles) — Apply 0.5mL 3% minoxidil liquid or foam to bilateral cheek and jawline 2×/day; massage in; leave minimum 4h before washing. ⚠️ DO NOT apply within 24h of any microneedling session. Shedding warning: beard may appear temporarily worse at D14–D30 (telogen release) — this is expected and signals biological activity. D90 result: +3–5 hairs/cm² in patchy zones; full terminal conversion continues to D120–D180. ⚠️ ONLY for beard absent (B1 profile) or significant patchiness. Distinct from G14 (scalp minoxidil). Category: grooming. Intro: Week 1.
 
 ─── FOUNDATION HABITS (all users) ───
 H1.  Hydration Log — Track daily water intake target (2.5–3L). D1. Category: hydration. Intro: Week 1.
@@ -457,22 +472,84 @@ Identify which profile applies before building the body protocol.
     Add mandatory note to posture tasks: "High-load spinal traction contraindicated — consult physiotherapist."
 
 ─── BEARD / GROOMING ROUTING (beard_present) ───
-  • TRUE: Prescribe G1 (neckline), G6 (heavy stubble at Week 4), G7 (daily check). Skip G9.
-  • FALSE: Prescribe G9 (shave optimization). Skip G1, G6.
+  • TRUE (beard present, adequate density):
+    - Week 1, D1: G1 (neckline architecture) + G15 (cheekline definition) + G16 (beard shaping by fWHR) + G17 (beard oil).
+    - Week 4+: G6 (heavy stubble maintenance 7–10mm).
+    - G7 (daily grooming check) throughout.
+    - Skip G9.
+
+  • TRUE (beard present, patchy/absent density):
+    - Prescribe G9 (clean shave optimization) as primary grooming intervention.
+    - Add G29 (minoxidil 3% beard) Week 1 — biological timer starts immediately.
+    - Warn user of shedding phase at D14–D30.
+    - Skip G1, G6, G16 until density improves.
+
+  • FALSE (no beard):
+    - Prescribe G9 (clean shave optimization) from Week 1.
+    - Note S15 (post-shave barrier repair) as mandatory skin companion — reference from Tier 4 skin section.
+    - Skip G1, G6, G15, G16, G17, G29.
 
 ─── DANDRUFF FLAG (dandruff_flag) ───
   • If TRUE: G4 (ketoconazole) is MANDATORY in Week 1 and takes absolute priority.
     Defer G3 (haircut optimization) to Week 3 minimum — scalp must be treated first.
 
 ─── HAIR LOSS FLAG (hair_loss_flag) ───
-  • If TRUE: Add G13 (scalp massage) Week 1 and G14 (minoxidil) Week 2.
-    Note in task label: long-term commitment required — results at D90+.
+  • If TRUE: First determine AGA severity from photo_quality_notes or posture/skin notes:
+
+    Norwood 1–3 (early recession, hairline partially present):
+      - MUST prescribe G23 (AGA haircut optimization) in Week 1 — ONLY photo-detectable D14 result for this profile.
+      - MUST prescribe G13 (scalp massage + rosemary oil) in Week 1.
+      - Add G14 (topical minoxidil 5%) in Week 2.
+      - Add G22 (2-week haircut frequency) to maintenance protocol.
+      - Note in task labels: "Domain B biological protocols (massage, minoxidil) have zero photo-detectable density change before D90 — haircut optimization is the visible win."
+
+    Norwood 4+ (horseshoe pattern, large crown/vertex exposure):
+      - MUST prescribe G18 (cranial shaving) in Week 1, Day 1 — most photo-detectable D1 transformation in Domain B.
+      - DO NOT prescribe G14 (minoxidil scalp) or G23 — no viable retention strategy for Norwood 4+.
+      - Add daily matte scalp moisturizer + SPF 30+ as companion tasks within G18.
+      - DO NOT prescribe G13 unless residual fringe exists.
 
 ─── DENTAL DISCOLORATION FLAG (dental_discoloration_flag) ───
   • If TRUE: Add G5 (tooth whitening strips) in Week 2. One of the highest D14 photo-detectable ROI practices.
 
 ─── RESTING EXPRESSION FLAG (resting_expression_flag) ───
   • If TRUE: Add G12 (resting expression awareness) in Week 1. Zero cost, zero risk.
+
+─── HAIR TEXTURE TYPE (hair_texture_type) ───
+  Read hair_texture_type before building any grooming protocol for G3, G20, G21, G22.
+
+  • "straight":
+    - G20: daily or every other day washing for fine (1A); every 2–3 days for medium/thick (1B/1C).
+    - G21: matte clay (1A) or matte paste/water-based pomade (1B/1C) applied to dry or damp hair.
+    - G3 barber brief: standard fWHR calibration applies — no shrinkage adjustment.
+
+  • "wavy":
+    - G20: every 2–3 days with sulfate-free shampoo.
+    - G21: paste or curl cream on damp hair + anti-humidity serum finish.
+    - G3 barber brief: request layering for wave definition; communicate sulfate sensitivity.
+
+  • "curly" or "coily":
+    - G20: weekly moisturizing wash with co-wash on interim days.
+    - G21: leave-in conditioner + alcohol-free gel (Type 3) or LOC method with styling butter (Type 4) on soaking wet hair.
+    - G3 barber brief: MANDATORY instruction — "My hair shrinks significantly when dry — cut longer than target length." High fWHR + coily: high fade + high-top shape. Low fWHR + coily: low taper, preserve lateral volume.
+    - G22: same frequency rules apply — high skin fade still decays within 2 weeks.
+
+  For all types: G21 (styling product selection) must be introduced same day as G3 barber visit.
+
+─── BEARD DENSITY & fWHR ROUTING ───
+  Read beard_present and the beard density estimation from photo_quality_notes before routing G16.
+
+  • beard_present = true:
+    - ALWAYS prescribe G16 (beard shaping by fWHR) in Week 1 — most users have not calibrated beard geometry to facial structure.
+    - Low fWHR (<1.9): G16 lateral bulk strategy. DO NOT prescribe high fade haircut (G3) — contradicts beard width goal.
+    - High fWHR (>2.1): G16 chin elongation strategy. DO NOT prescribe uniform heavy stubble on high-fWHR faces without vertical taper.
+    - Mid fWHR: G16 balanced strategy + standard G6.
+
+  • Beard density absent or severe patchiness (photo_quality_notes or diagnostic indicate sparse/patchy growth):
+    - DO NOT prescribe G6 (heavy stubble) or G16 — attempting stubble when density is absent highlights gaps.
+    - Prescribe G9 (clean shave optimization) as primary.
+    - Add G29 (minoxidil 3% beard) in Week 1 for long-term density development.
+    - Note in task label: "Shedding may occur at D14–D30 — this is expected and signals biological activity."
 
 ─── TIER 1 FACE — ROUTING RULES ───
 
