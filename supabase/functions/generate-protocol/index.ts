@@ -35,7 +35,7 @@ B1.  Lateral Deltoid Raises — 4×12. Highest ROI for V-taper width. Lateral de
 B2.  Overhead Press — 4×8. Shoulder mass and cap roundness. Category: fitness. Intro: Week 2.
 B3.  Pull-ups / Lat Pulldowns — 4×8. Lat width — V-taper foundation. Category: fitness. Intro: Week 2.
 B4.  Seated Cable Row — 4×10. Mid-back thickness, shoulder retraction reinforcement. Category: fitness. Intro: Week 3.
-B5.  Caloric Deficit Protocol — 300–500 kcal/day deficit. Systematic fat loss. ⚠️ DO NOT prescribe for ectomorph. Category: nutrition. Intro: Week 1.
+B5.  Caloric Deficit Protocol — 300–500 kcal/day deficit. Systematic fat loss. ⚠️ DO NOT prescribe for ectomorph. Note: also the highest-ROI Tier 1 Face intervention — facial adiposity is the single strongest predictor of male facial attractiveness (r = 0.71). Category: nutrition. Intro: Week 1.
 B6.  Protein Target — 1.6–2.2g per kg bodyweight. Muscle preservation during fat loss or building. Category: nutrition. Intro: Week 1.
 B7.  HIIT Cardio — 3×/week, 20 min. Fat loss acceleration, vascular definition. ⚠️ DO NOT prescribe for ectomorph. Category: fitness. Intro: Week 3.
 B8.  Compound Lift Foundation — Bench press, Squat, Deadlift 2×/week. Overall mass and structural development. Category: fitness. Intro: Week 3.
@@ -45,18 +45,23 @@ B11. Sleep for Recovery — 7–9h nightly. GH release, muscle protein synthesis
 
 ─── TIER 1 ACTIONABLE: FACE ───
 F1.  Hydration Target — 2.5–3L water daily. Reduces facial puffiness and dark circles. Category: hydration. Intro: Week 1.
-F2.  Sleep Optimization — 7–8h sleep. Reduces periocular puffiness and edema. Fastest win D1–D7. Category: sleep. Intro: Week 1.
-F3.  Sodium Reduction — Limit processed food sodium. Reduces interstitial fluid retention / facial edema. ⚠️ ONLY if dark_circle_type = vascular or edema pattern detected. Category: nutrition. Intro: Week 1.
-F4.  Alcohol Reduction — Limit to ≤2 drinks/week. Reduces facial puffiness and periorbital edema. ⚠️ ONLY if edema pattern detected. Category: lifestyle. Intro: Week 1.
+F2.  Sleep Optimization — 7–8h sleep. Reduces periocular puffiness and edema. Fastest win D1–D7. Even 2 nights of partial restriction (4h) measurably decreases attractiveness ratings. Category: sleep. Intro: Week 1.
+F3.  Sodium Reduction — Limit processed food sodium (≤2,300 mg/day). Reduces interstitial fluid retention / facial edema. ⚠️ ONLY if dark_circle_type = vascular or edema pattern detected. Category: nutrition. Intro: Week 1.
+F4.  Alcohol Reduction — Limit to ≤4 drinks/week. Twin-controlled evidence (p = 0.0002) for facial aging reduction — associated with 7 of 11 facial aging features regardless of edema pattern. ⚠️ Include for any user who reports alcohol consumption in questionnaire. Category: lifestyle. Intro: Week 1.
+F5.  Zygomatic Resistance Training — "Happy Cheeks Sculpting": smile without teeth, force lips together, contract cheeks upward, 3×10 reps × 20s isometric hold. Targets zygomaticus major hypertrophy (+6–8% CSA at 8 weeks). ⚠️ MANDATORY START WEEK 5 MINIMUM — prescribing before visible facial fat reduction causes chipmunk widening effect. Only meaningful if BF appears below 20%. Category: face. Intro: Week 5.
+F6.  Corrective Oral Posture — Tongue flat against palate, lips sealed, nasal breathing. Suprahyoid muscle activation tightens submental contour. Continuous habit (not timed exercise). Immediate visual improvement in jaw-neck angle; cumulative resting tone at 4–8 weeks. ⚠️ Skeletal mewing claims (bone/palate expansion) are pseudoscience — benefit is soft-tissue and postural only. Category: face. Intro: Week 1.
+F7.  Orbicularis Oculi Training — Lower eyelid isometric hold 3×10 reps × 10s each. Reduces inferior scleral show → appearance of more positive canthal tilt. Pair with cold water rinse for periorbital lymphatic drainage. ⚠️ ONLY if canthal tilt concern noted. MANDATORY ceiling note: "Structural canthal tilt is determined by bone and tendon — this practice improves appearance only, not structural angle." Category: face. Intro: Week 1.
+F8.  Bilateral Masticatory Habituation — Consciously distribute chewing bilaterally during all meals (alternate 3 chews left / 3 right). Reduces asymmetric masseteric hypertrophy. 92.1% of people have wider hemiface on dominant chewing side. ⚠️ ONLY if facial asymmetry noted in diagnostic. Ceiling: muscular/edema only — skeletal asymmetry uncorrectable. Category: face. Intro: Week 1.
+F9.  Gua Sha / Facial Roller — 5–10 min daily, jaw/neck upward toward temples. ~2–3mm soft tissue contour reduction at 8 weeks via lymphatic drainage. Adjunct only — no structural change. Category: face. Intro: Week 3.
 
 ─── TIER 4: SKIN ───
 S1.  Gentle Cleanser 2×/day — Foundation of all skin protocols. Non-stripping. D1. Category: skincare. Intro: Week 1.
 S2.  Moisturizer AM + PM — Barrier repair and hydration. Essential before any actives. Category: skincare. Intro: Week 1.
-S3.  SPF 30+ Sunscreen — Daily AM. 83% of men skip — immediate high-ROI gap. Extends improvement ceiling. Category: skincare. Intro: Week 1.
+S3.  SPF 30+ Sunscreen — Daily AM. 83% of men skip — immediate high-ROI gap. Extends improvement ceiling. Only intervention proven to halt measurable facial aging progression (Hughes 2013 RCT). Category: skincare. Intro: Week 1.
 S4.  Niacinamide 5–10% serum — Sebum control, pore visibility, tone uniformity, redness, mild acne. Best-tolerated multi-target active. ⚠️ PRIMARY for dark_circle_type = pigmentary. Category: skincare. Intro: Week 2.
 S5.  Salicylic Acid 2% (BHA) — 3×/week. Texture, pore size, post-acne marks. ⚠️ PRIMARY for acne_subtype = comedonal. Category: skincare. Intro: Week 2.
 S6.  Benzoyl Peroxide 2.5–5% — 50–80% inflammatory lesion reduction achievable in 90 days. ⚠️ PRIMARY for acne_subtype = inflammatory. MANDATORY if inflammatory acne present. Category: skincare. Intro: Week 2.
-S7.  Retinol 0.25–0.5% — Texture, tone, luminosity, collagen. Introduce after 4 weeks of barrier prep. Category: skincare. Intro: Week 5.
+S7.  Tretinoin / Retinoid — Primary: Tretinoin 0.025–0.05% (Rx) — Level A, 40–52% improvement in texture/clarity/pigmentation at 52 weeks. Refer user to dermatologist. Fallback if no Rx access: Retinol 0.25–0.5% (OTC, weaker evidence). Introduce after 4 weeks of barrier prep. Start 3×/week, titrate to nightly. Category: skincare. Intro: Week 5.
 S8.  Low-glycemic diet + dairy reduction — IGF-1/mTORC1 pathway reduces acne load. Effect at D30–D60. ⚠️ ONLY if acne present (any subtype). Category: nutrition. Intro: Week 1.
 S9.  Ceramide barrier repair moisturizer — Essential if compromised barrier (flaking, dehydration lines). Must precede retinol introduction. Category: skincare. Intro: Week 1.
 S10. Caffeine eye cream — Vasoconstriction reduces vascular dark circles. ⚠️ ONLY if dark_circle_type = vascular. Category: skincare. Intro: Week 2.
@@ -68,7 +73,7 @@ G2.  Eyebrow Cleanup — Remove glabellar (between-brow) hair. D1. Photo-detecta
 G3.  Haircut Optimization — Cut aligned to face shape and fWHR. Calibrate to hair_texture_type. ⚠️ If dandruff_flag = true: treat scalp first, defer haircut recommendation to Week 3. Category: grooming. Intro: Week 1.
 G4.  Dandruff Treatment — Ketoconazole 2% shampoo 2×/week. 73% improvement by D7. ⚠️ MANDATORY and FIRST priority if dandruff_flag = true. Category: grooming. Intro: Week 1.
 G5.  Tooth Whitening Strips — 14% HP strips, 14-day cycle. ΔE ≥3.3 photo-detectable change. ⚠️ ONLY if dental_discoloration_flag = true. Category: grooming. Intro: Week 2.
-G6.  Heavy Stubble Maintenance — Maintain 7–10mm. Strongest evidence base for beard attractiveness. ⚠️ ONLY if beard_present = true, Intro Week 4+. Category: grooming. Intro: Week 4.
+G6.  Heavy Stubble Maintenance — Maintain 7–10mm. Strongest evidence base for beard attractiveness (N=8,520). ⚠️ ONLY if beard_present = true, Intro Week 4+. Category: grooming. Intro: Week 4.
 G7.  Daily Grooming Consistency Check — Mirror check: beard, hair, brows, lips, nasal area. D1. Category: grooming. Intro: Week 1.
 G8.  Fragrance — Daily application. Self-confidence mechanism. Non-photo-detectable but high in-person ROI. Category: grooming. Intro: Week 1.
 G9.  Clean Shave Optimization — Technique, razor quality, post-shave routine. ⚠️ ONLY if beard_present = false. Category: grooming. Intro: Week 1.
@@ -189,6 +194,41 @@ This is the most consequential flag. Prescribing the wrong nutrition protocol he
 ─── RESTING EXPRESSION FLAG (resting_expression_flag) ───
   • If TRUE: Add G12 (resting expression awareness) in Week 1. Zero cost, zero risk.
 
+─── TIER 1 FACE — ROUTING RULES ───
+
+POSTURE AS FACE INTERVENTION (cross-tier — critical):
+  • Forward head posture compresses the submental space, pushing soft tissue forward and creating the appearance of a double chin — independent of actual fat. Correcting FHP repositions the mandible anteriorly in the observer's line of sight and stretches submental soft tissue. Effect is partly immediate (visual repositioning) and partly cumulative.
+  • P1 (cervical retraction) and P3 (deep neck flexor strengthening) are Tier 1 Face interventions as much as posture interventions. If tier_face is low and the diagnostic notes submental softness or weak jaw-neck angle: MUST include P1 in Week 1 even if tier_posture score is adequate.
+  • F6 (corrective oral posture) compounds this: tongue-to-palate activates the suprahyoid group, physically elevating the hyoid and tightening submental fascia. P1 + F6 together = the highest-ROI D1 face stack for mandibular definition.
+
+FACIAL FAT / ROUND FACE (primary driver in most cases):
+  • Fat loss (B5) is the single highest-ROI face intervention — facial adiposity outperforms symmetry and masculinity as a predictor of male attractiveness. If body_phenotype ≠ ectomorph: B5 + B7 serve double duty — body AND face score simultaneously. Communicate this cross-tier role explicitly in the protocol.
+  • F6 (corrective oral posture) is universally indicated from Week 1 — immediate submental contour improvement, zero cost.
+  • F3 (sodium reduction) and F4 (alcohol reduction): include if edema pattern evident.
+  • ⚠️ CHIPMUNK EFFECT GATE — HARD RULE: DO NOT prescribe F5 (zygomatic resistance training) before Week 5 under any circumstances. Prescribing muscular hypertrophy into overlying facial fat widens the face. F5 is only introduced once visible facial fat reduction is confirmed (Day 30 checkpoint minimum).
+  • PSEUDOPTOSIS PHASE — clinical context for Week 5 activation: Around Day 30, deflated fat compartments may cause a temporary "saggy" appearance as subcutaneous volume reduces before muscle hypertrophy fills the space. This is the correct clinical moment to introduce F5 — the hypertrophying zygomaticus major fills the deflated midface. Communicate this to the user so they do not interpret the temporary deflation as regression.
+
+FACIAL ASYMMETRY:
+  • If asymmetry noted in diagnostic: prescribe F8 (bilateral masticatory habituation) from Week 1.
+  • Ceiling note: skeletal asymmetry is non-correctable non-surgically. F8 addresses soft-tissue and muscular asymmetry only. Communicate this if asymmetry appears structural.
+
+CANTHAL TILT CONCERN:
+  • If canthal tilt concern noted: prescribe F7 (orbicularis oculi training) from Week 1.
+  • MANDATORY ceiling communication in task label or focus_note: "Structural canthal tilt is fixed by bone and canthal tendon. F7 improves the appearance of canthal tilt through eyelid tone — not the structural angle. Only canthoplasty changes structural canthal tilt."
+
+NON-SURGICAL CEILINGS — COMMUNICATE HONESTLY WHEN RELEVANT:
+  • Canthal tilt (structural): non-surgical ceiling is zero. Appearance only via F7.
+  • Facial thirds proportions: near-zero ceiling. Only lower-third soft tissue is modifiable.
+  • fWHR (skeletal bizygomatic width): bone is fixed. Only soft tissue overlay modifiable (~3–5% reduction via fat loss). If skeletal width is the driver, inform the user.
+  • Mandibular definition: if body fat appears already lean and jawline remains weak → likely skeletal (gonial angle). Communicate non-surgical ceiling. Do not over-prescribe face practices for a skeletal variable.
+  • Zygomatic bone projection: fixed. Only fat loss reveals existing contour; F5 adds muscle volume above the arch.
+  • Facial fat distribution and skin quality: high non-surgical ceilings — these are the primary levers.
+
+SEQUENCING RULE (critical — apply before building protocol):
+  • Fat loss must precede accurate assessment of bone-structure-dependent face variables.
+  • A user cannot accurately assess mandibular definition, zygomatic prominence, or fWHR while carrying significant facial fat.
+  • If body_phenotype = endomorph or mesomorph with high body fat: Phase 1 is primarily fat loss. Face-specific assessment is deferred to the Day 30 checkpoint.
+
 ─── TIER CONFIDENCE (tier_confidence) ───
   • If any tier confidence = "low": reduce that tier's protocol weight.
     Example: if posture confidence = low (body side photo was poor), don't over-prescribe posture corrections — the AI had limited visibility.
@@ -202,7 +242,7 @@ This is the most consequential flag. Prescribing the wrong nutrition protocol he
    3+ days/week: Full compound + isolation split from Phase 1 Week 3.
 
 2. PRIMARY GOAL (more attractive / more imposing / cleaner look)
-   "more attractive": Prioritize face actionables (F1, F2), skin, and grooming quick wins.
+   "more attractive": Prioritize face actionables (F1, F2, F6), skin, and grooming quick wins.
    "more imposing": Prioritize shoulder width (B1, B2), neck (note in body tasks), posture.
    "cleaner look": Prioritize skin protocol and grooming precision.
 
@@ -219,9 +259,9 @@ TASK LABEL RULES:
   • No motivational language. No emojis.
 
 PROGRESSIVE PRACTICE INTRODUCTION:
-  Weeks 1–2: Foundation only — D1-eligible practices (posture basics, cleanser, SPF, grooming D1 ROI, hydration, sleep).
-  Weeks 3–4: Add D7+ practices (niacinamide, BHA or BPO, resistance band work, posture reinforcement).
-  Weeks 5–8: Add D14+ practices (compounds, HIIT if applicable, deeper actives, whitening if flagged).
+  Weeks 1–2: Foundation only — D1-eligible practices (posture basics, cleanser, SPF, grooming D1 ROI, hydration, sleep, F6 oral posture).
+  Weeks 3–4: Add D7+ practices (niacinamide, BHA or BPO, resistance band work, posture reinforcement, F9 gua sha if applicable).
+  Weeks 5–8: Add D14+ practices (compounds, HIIT if applicable, deeper actives, whitening if flagged, F5 zygomatic training — Week 5 earliest).
   Weeks 9–12: Add D30+ practices (retinol, heavy stubble maintenance, advanced grooming precision).
 
 PRIORITIZATION LOGIC:
@@ -230,6 +270,7 @@ PRIORITIZATION LOGIC:
   • If tier_skin < 55: front-load S1, S2, S3 in Week 1; add acne-specific active in Week 2.
   • If tier_grooming < 55: front-load G1 or G9 + G2 + G7 in Week 1.
   • If tier_body < 55: introduce body phenotype-appropriate nutrition in Week 1; fitness in Week 2.
+  • If tier_face < 55: front-load F6 (oral posture) + F2 (sleep) in Week 1. If body_phenotype ≠ ectomorph, cross-reference B5 as the primary face intervention with explicit note. Add F5 in Week 5 only — never before.
 
 ━━━ RULES ━━━
   • Use ONLY practices from the Protocol Library. Do not invent new practices.
@@ -411,10 +452,10 @@ Instructions:
                               category: {
                                 type: "string",
                                 description:
-                                  "posture / fitness / nutrition / skincare / grooming / hydration / sleep / lifestyle",
+                                  "posture / fitness / nutrition / skincare / grooming / hydration / sleep / lifestyle / face",
                               },
                               duration: { type: "string", description: "e.g. '10 min', '3×10 reps', 'daily'" },
-                              code: { type: "string", description: "Library practice code (e.g. P1, B3, S6)" },
+                              code: { type: "string", description: "Library practice code (e.g. P1, B3, S6, F5)" },
                             },
                             required: ["label", "category", "code"],
                           },
