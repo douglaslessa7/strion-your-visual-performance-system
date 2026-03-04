@@ -17,18 +17,21 @@ const PROTOCOL_LIBRARY = `
 ━━━ STRION PROTOCOL LIBRARY ━━━
 
 ─── TIER 3: POSTURE ───
-P1.  Cervical Retraction — 3×10 reps daily. Corrects forward head posture. Fastest visible change D1–D14. Also a cross-tier Face intervention: repositions mandible anteriorly and stretches submental soft tissue — prescribe even if posture tier is adequate when tier_face is low. Category: posture. Intro: Week 1.
+P1.  Cervical Retraction (CCFT approach) — 3×10 reps daily. Selectively activates deep cervical flexors (longus colli/capitis) while inhibiting SCM and anterior scalene. Home protocol: supine, small towel roll under cervical spine, gentle chin nod (craniovertebral flexion ONLY — NOT neck flexion), hold 10 sec. ⚠️ If SCM contracts visibly: regress to wall chin retraction. Level A evidence: +4.8° CVA at 6 weeks (Im 2015); +6.1° CVA at 10 weeks (Javanshir 2011). Also a cross-tier Face intervention: repositions mandible anteriorly and stretches submental soft tissue — prescribe even if posture tier is adequate when tier_face is low. Category: posture. Intro: Week 1.
 P2.  Wall Posture Drill — Stand heels/glutes/shoulders/head touching wall, 2 min hold. Full-chain postural re-education. Category: posture. Intro: Week 1.
-P3.  Deep Neck Flexor Strengthening — Chin tuck holds 3×10 sec. Stabilizes CVA correction. Cross-tier Face: stabilizes mandible positioning for improved jaw-neck angle. Category: posture. Intro: Week 1.
-P4.  Thoracic Foam Rolling — 2 min on thoracic spine, 10 extensions. Reduces kyphosis, opens chest. Category: posture. Intro: Week 1.
-P5.  Thoracic Extension over chair — 10 reps. Upper back mobility, directly improves side profile. Category: posture. Intro: Week 2.
-P6.  Band Pull-Aparts — 3×15. Rhomboid + mid-trap activation. Retracts protracted shoulders. Category: posture. Intro: Week 2.
-P7.  Scapular Wall Slides — 3×10. Shoulder blade alignment and serratus activation. Category: posture. Intro: Week 3.
-P8.  Posture Habit Anchor — Cervical retraction cue set at phone/desk/sitting. Highest long-term compliance. Category: posture. Intro: Week 1.
+P3.  Deep Neck Flexor Strengthening — Chin tuck holds 3×10 sec. Stabilizes CVA correction. Cross-tier Face: stabilizes mandible positioning for improved jaw-neck angle. ⚠️ Best as standalone session or post-workout — not compatible with pre-fatigue for heavy cervical loading. Category: posture. Intro: Week 1.
+P4.  Thoracic Foam Rolling — 2 min on thoracic spine (T6–T12), 10 extensions over roller. ⚠️ ALWAYS perform BEFORE P5 (thoracic extension) and before any upper-body pressing. Functions as pre-exercise facilitator: +2.7° additional kyphosis benefit vs. extension training alone (Mousavi 2019). ⚠️ No evidence for standalone sustained correction — facilitator only. Category: posture. Intro: Week 1.
+P5.  Thoracic Extension Strengthening — Prone thoracic extension: arms at sides, lift chest, 3×10, hold 3 sec. Directly improves side-profile and chest-open appearance. Level A evidence (Katzman 2017 SHEAF RCT, N=99): −3.0° Cobb between groups at 6 months; appearance satisfaction also improved — only study in Tier 3 documenting photo-relevant psychosocial benefit. Elpeze 2022 CCEP (young males): −8.93° at 12 weeks with combined postural awareness training. ⚠️ Perform P14 (diaphragmatic breathing — 5 breaths) immediately before each set for additional −2.6° benefit (Rashed 2024). ⚠️ When kyphosis is present alongside CVA (FHP): this practice takes Phase 1 priority over P1/P3 — thoracic correction must precede cervical work. Category: posture. Intro: Week 1.
+P6.  Band Pull-Aparts + Face Pulls — 3×15. Strengthens middle trapezius and rhomboids to counteract anterior dominance. Bayattork 2024 meta-analysis (20 studies, 774 participants): significant RSP reduction across all formats. Use as pre-activation before lat pulldowns and rows — reduces upper trap compensation during pull exercises. Face pull variant (rope attachment, elbows high): 3×15 for combined RSP + external rotation. Category: posture. Intro: Week 2.
+P7.  Scapular Wall Slides — 3×10. Shoulder blade alignment and serratus activation. Excellent as pre-workout warm-up before bench press, overhead press, or shoulder development. Category: posture. Intro: Week 3.
+P8.  Ergonomic + CPC Habit Protocol — Universal non-negotiable (60/40 Rule: 60–70% of postural improvement is driven by ergonomic habituation; 30–40% by exercise). Mandatory in every protocol regardless of other practices. TWO components: (A) ERGONOMIC CORRECTION: (1) monitor top at eye level, arm's length; (2) 90/90/90 rule — hips/knees/elbows; (3) movement break every 30 min (2–3 min cervical retraction + thoracic extension); (4) phone at eye level; (5) optimal pillow height ~10 cm; (6) avoid stomach sleeping. (B) CONSCIOUS POSTURAL CORRECTION (CPC): set phone alarm every 60 min; perform 5-step postural check (chin retraction, shoulders back, chest open, lumbar neutral, weight through heels), hold 30 sec. Mechanism: postural deviation is maintained by disrupted proprioception — the brain's "neutral" reference has shifted toward the deviated position; CPC resets this proprioceptive reference through deliberate, frequent cuing. Argyrou 2025: +5.5° CVA improvement at 6 weeks — the largest single-intervention CVA effect in the Tier 3 literature, larger than CCFT (P1). ⚠️ POSTURAL VARIATION PRINCIPLE: the goal is variation, microbreaks, and movement — NOT sustained static "perfect posture." Sustained upright holding increases fatigue and MSK discomfort. Cue "tall and relaxed," not "military chest out." Level A evidence (Shariat 2019): 40–60% MSK pain reduction at 8 weeks. Without this, exercise adaptations are overwhelmed by 8–12h of daily maladaptive loading. Category: posture. Intro: Week 1.
 P9.  Stomach Vacuum — Transversus abdominis activation, 3×20 sec hold. Reduces abdominal protrusion from TrA weakness. 2.5–5.0 cm resting waist reduction in 5–8 weeks (neuromuscular mechanism — not fat loss). ⚠️ INEFFECTIVE if BF > 20% — adipose layer physically prevents visible effect. Introduce Week 5+ only for users with established fat loss trajectory. ⚠️ MAINTENANCE-DEPENDENT: effect is entirely neuromuscular — resting waist reduction reverses when practice is abandoned. Communicate this to user so they do not interpret discontinuation regression as protocol failure. Category: posture. Intro: Week 5.
-P10. Wall Angels — 3×10 slow reps against wall. Serratus anterior + lower trapezius. Corrects scapular winging. Category: posture. Intro: Week 3.
-P11. Balance / Proprioceptive Training — Single-leg stance 3×30 sec/side. Resets vestibular neutral — corrects lateral head tilt. Category: posture. Intro: Week 2.
-P12. Dead Hang — 3×30 sec. Spinal decompression, thoracic opening. ⚠️ CONTRAINDICATED if scoliosis_safety_flag = true. Category: posture. Intro: Week 4.
+P10. Wall Angels / Wall Slide — 3×10 slow reps against wall. Simultaneously requires thoracic extension, scapular retraction/depression, and shoulder external rotation. Wall provides tactile feedback preventing compensation. Kim T-H 2016 (RCT, N=22 men): +1.82° scapular alignment improvement in 4 weeks. Excellent pre-workout warm-up before bench press and overhead press. ⚠️ Advance to next level only when full wall contact is maintained throughout. Category: posture. Intro: Week 3.
+P11. Balance / Proprioceptive Training — Single-leg stance 3×30 sec/side. Resets vestibular neutral — corrects lateral head tilt and shoulder asymmetry. Gebauer 2025: 20–30% reduction in postural asymmetry at 8 weeks. Integrates naturally with single-leg gym exercises (Bulgarian split squat, single-leg RDL). Category: posture. Intro: Week 2.
+P12. Dead Hang — 3×30 sec. Spinal decompression, thoracic opening. ⚠️ ABSOLUTE CONTRAINDICATION if scoliosis_safety_flag = true. ⚠️ Evidence is Level C (Akçay 2024, single study). No RCTs demonstrate improvement in STRION photographic variables (CVA, RSP, kyphosis) with predictable magnitude. Treat as spinal decompression adjunct ONLY — NOT as primary corrective intervention. Conservative messaging required: "Decompression benefit; not a postural correction tool." Prescribe only for healthy spines, Weeks 4+. Category: posture. Intro: Week 4.
+P13. Pec Minor / Anterior Chain Stretch — Doorway stretch: elbow at 90° on door frame, step forward until stretch in anterior shoulder, hold 60 sec/side, 3 sets. Addresses RSP flexibility component — ⚠️ RSP FULL STACK: P13 alone produces incomplete RSP correction. MUST pair with P6 (scapular retraction strength) and B4 (seated cable row — mid-back thickness). Wang 2021 systematic review: pec minor stretch reduces RSP only when combined with scapular stabilization training. Prescribe all three components whenever RSP is the primary variable. Lee 2015 (RCT): −3.7° shoulder protraction angle + 1.2 cm pec minor length at 4 weeks. Post-stretch activation: immediately perform 3×10 prone I exercise after stretching to potentiate length adaptation. ⚠️ DO NOT perform immediately before heavy pressing — schedule post-workout or in a separate session to avoid acute performance reduction. Category: posture. Intro: Week 2.
+P14. Diaphragmatic Breathing — One hand on chest, one on abdomen; inhale through nose so belly rises and chest stays still; 5 min daily. Perform 5 breaths immediately before each thoracic extension set (P5) and before CCFT sets (P1) — produces additional −2.6° kyphosis reduction vs. extension alone (Rashed 2024). Suppresses SCM/scalene dominance. Improves intra-abdominal pressure for spinal loading in gym sessions. Level B evidence. Also prescribed 5 breaths pre-workout to reduce accessory muscle recruitment and improve IAP. Category: posture. Intro: Week 1.
+P15. APT Protocol — Hip Flexor Stretch + Glute Activation: Half-kneeling lunge, posterior pelvic tilt FIRST (flatten lumbar before shifting forward), hold 60–90 sec/side, 3 sets. Immediately followed by: supine glute bridge 3×15 with 2-sec hold, cue "flatten low back throughout." Progresses to single-leg glute bridge 3×10/side in Phase 2. ⚠️ APT HONEST CEILING — MANDATORY MESSAGING: Levine 1997 (RCT, N=40, 8 weeks) showed ~0° sustained APT change with abdominal + stretching. Kang 2016 showed −4.2° with glute-specific protocol. Realistic 90-day outcome: 0–4°, high variability. DO NOT promise APT correction as a primary outcome. Task label must reflect: "Protocol targets hip flexor flexibility and glute activation — measurable pelvic angle change in 90 days is possible but not guaranteed." Level B/C (conflicting evidence). Category: posture. Intro: Week 3.
 
 ─── TIER 2: BODY ───
 B1.  Lateral Deltoid Raises — 5 sets × 16RM load, to momentary concentric failure per set, 2×/week, neutral humerus rotation (thumb parallel to floor). Neutral rotation maximizes medial deltoid activation (ES=1.47 vs other orientations). #1 muscle group for male bodily attractiveness. Cable vs dumbbell: equivalent — choose freely. Increase load when all reps completed without approaching failure. Category: fitness. Intro: Week 2.
@@ -226,11 +229,86 @@ Identify which profile applies before building the body protocol.
   • AB SHAPE (4-pack vs 6-pack vs 8-pack; symmetry) is determined entirely by tendinous inscriptions — a genetic trait that cannot be altered by any training method. If user asks about ab configuration: communicate this ceiling honestly.
   • Ab endurance training (planks, anti-rotation) is valid as a posture/core stability practice but has zero cosmetic effect on ab visibility or shape — label as posture/functional if included.
 
-
   • P9 is INEFFECTIVE if BF > 20% — adipose layer physically prevents visible effect regardless of TrA contraction.
   • DO NOT prescribe P9 in Phase 1 for endomorphic, high-BF mesomorph, or skinny_fat profiles.
   • Activate P9 in Week 5+ ONLY if fat loss trajectory indicates BF is approaching or below 20%.
   • For Profile B (lean): P9 may be introduced from Week 1 — TrA effect is immediately visible at low BF%.
+
+─── POSTURE SEQUENCING — PROXIMAL-BEFORE-DISTAL ───
+  This is a clinical sequencing rule. Postural correction must follow an anatomical hierarchy.
+  Thoracic kyphosis drives scapular protraction which drives forward head posture. Correcting
+  the cervical segment alone when kyphosis is present is a sequencing error.
+
+  MOTOR CONTROL TIMELINE — use this to write accurate focus_notes per phase:
+    Days 1–21 (Phase 1): Neuromuscular re-patterning — improvement is awareness-level, not structural. Focus_notes should reference "postural awareness" and "motor re-education," NOT "structural correction."
+    Days 21–45 (Phase 2): Connective tissue tone adjustment — maintained correction without constant cuing; resting tone improves. Focus_notes can reference "resting posture improvement."
+    Days 45–90 (Phase 3): Structural adaptation — sarcomere addition, ligamentous plastic deformation. Focus_notes can reference "structural consolidation."
+
+  90-DAY HONEST CEILINGS — reference when writing focus_notes to avoid over-promising:
+    CVA: +3–7° realistic for adults following full protocol. +5° is a strong outcome.
+    RSP: −1.5 to −3.0 cm. Angular improvement ~3–6°.
+    Thoracic kyphosis: −3° (structural adult) to −8.93° (young/flexible with combined program). Most adults: ~1–5°.
+    APT: 0–4° with high uncertainty — DO NOT reference APT correction as a primary expected outcome in any focus_note.
+
+  RULE: When posture notes or low tier_posture suggest BOTH FHP (CVA issue) AND thoracic kyphosis:
+    • Phase 1 (Weeks 1–4): Thoracic first — P4 (foam roll), P5 (thoracic extension), P8 (ergonomic + CPC), P14 (diaphragmatic breathing). P2 (wall posture drill) also in Phase 1 for full-chain awareness.
+    • Phase 2 (Weeks 5–8): Scapular next — P6 (pull-aparts), P13 (pec minor stretch), P10 (wall angels), P7 (wall slides). APT practices (P15) introduced here if applicable.
+    • Phase 3 (Weeks 9–12): Cervical last — P1 (cervical retraction CCFT) + P3 (deep neck flexor) introduced once thoracic partially corrected.
+
+  RULE: When only FHP (CVA) is present without significant kyphosis:
+    • P1, P3, P4, P8, P14 can all be introduced in Phase 1 (Weeks 1–2).
+    • No sequencing restriction applies.
+
+  CLINICAL NOTE: A user with CVA <47° AND kyphosis indicators will NOT resolve FHP through P1/P3 alone.
+  Do not front-load cervical exercises for this user profile — it is ineffective until the thoracic segment is addressed.
+
+─── RSP ROUTING (rounded shoulder posture) ───
+  If posture_notes mention rounded shoulders, protracted scapulae, or visible anterior shoulder dominance —
+  OR if tier_posture is low with the primary variable appearing to be shoulder alignment rather than CVA:
+    • PRESCRIBE THE RSP FULL STACK — all three components are required:
+        P6 (band pull-aparts / face pulls) — scapular retraction strength. Pre-workout positioning.
+        P13 (pec minor stretch) — anterior chain flexibility. Post-workout or separate session only.
+        B4 (seated cable row) — mid-back thickness and sustained scapular retraction under load.
+    • Introduce P6 + P13 in Phase 1 (Weeks 2–3). B4 in Phase 1 Week 3 or Phase 2 depending on training frequency.
+    • DO NOT prescribe only P13 or only P6 — partial stack is insufficient for lasting RSP correction.
+    • If RSP coexists with kyphosis: follow proximal-before-distal sequencing. P5 (thoracic extension)
+      takes Phase 1 priority before scapular work. Introduce RSP stack in Phase 2.
+    • If RSP is the SOLE posture variable (no kyphosis): RSP full stack can begin in Phase 1 Week 2.
+
+─── APT ROUTING (anterior pelvic tilt) ───
+  If posture_notes mention anterior pelvic tilt, lumbar hyperlordosis, or excessive forward lean — OR if
+  the user is athletic (mesomorph/ectomorph) with tight hip flexors:
+    • Prescribe P15 (APT protocol) from Week 3 minimum.
+    • DO NOT introduce P15 in Phase 1 — ergonomic (P8) and thoracic practices take priority.
+    • MANDATORY honest ceiling note in task label: "Targets hip flexor flexibility and glute activation — pelvic angle change in 90 days is possible but not guaranteed (evidence is conflicting)."
+    • If goal = "more imposing" AND athletic build: P15 + B8 hip thrust in Phase 2 is the correct APT + glute development stack.
+    • DO NOT promise APT correction as a primary outcome in any focus_note.
+
+─── TIER 2 / TIER 3 GYM INTEGRATION ───
+  When the user has BOTH a fitness protocol (Tier 2) AND posture practices (Tier 3), position them correctly
+  within or around gym sessions. Prescribing posture practices at the wrong time reduces both effectiveness
+  and gym performance.
+
+  PRE-WORKOUT (warm-up block — always schedule here):
+    • P4 (thoracic foam roll) — increases thoracic extension range before pressing/overhead
+    • P10 (wall angels) — serratus + lower trap pre-activation before bench/overhead press
+    • P14 (diaphragmatic breathing — 5 breaths) — reduces SCM dominance; improves IAP
+    • P7 (scapular wall slides) — shoulder pre-activation
+
+  PRE-ACTIVATION before pull exercises (rows, lat pulldowns):
+    • P6 (band pull-aparts / scapular rows) — reduces upper trap compensation during pulling
+
+  POST-WORKOUT or SEPARATE SESSION (critical — never before heavy pressing):
+    • P13 (pec minor stretch) — acute stretch before heavy pressing reduces performance; schedule after session or on off days
+    • P3 (CCFT / deep neck flexor) — not compatible with pre-fatigue for heavy cervical loading
+
+  STANDALONE / ANY TIME:
+    • P1 (cervical retraction) — can be done at desk, at home, any time
+    • P2 (wall posture drill) — standalone
+    • P8 (ergonomic habit) — continuous behavioral practice
+    • P15 (APT protocol) — standalone or post-workout
+
+  INTERFERENCE RULE: DO NOT prescribe P13 (prolonged static stretch) or P3 immediately before heavy compound pressing. Acute flexibility work reduces force production. Schedule post-workout or on separate days.
 
 ─── ACNE SUBTYPE (acne_subtype) — DIVERGENT SKINCARE ROUTING ───
 
@@ -347,14 +425,15 @@ TASK LABEL RULES:
   • No motivational language. No emojis.
 
 PROGRESSIVE PRACTICE INTRODUCTION:
-  Weeks 1–2: Foundation only — D1-eligible practices (posture basics, cleanser, SPF, grooming D1 ROI, hydration, sleep, F6 oral posture, B17 aerobic start, B16 neck at bodyweight).
+  Weeks 1–2: Foundation only — D1-eligible practices (posture basics P1/P2/P3/P4/P8, P14 diaphragmatic breathing, cleanser, SPF, grooming D1 ROI, hydration, sleep, F6 oral posture, B17 aerobic start, B16 neck at bodyweight).
   Weeks 3–4: Add D7+ practices (niacinamide, BHA or BPO, resistance band work, posture reinforcement, B7 HIIT if applicable, B12 triceps, B13 incline, B14 pre-sleep protein).
   Weeks 5–8: Add D14+ practices (compounds, deeper actives, whitening if flagged, F5 zygomatic training — Week 5 earliest, P9 stomach vacuum if BF trajectory allows, B18 blood flow protocol if applicable, B15 creatine for Profile A delayed).
   Weeks 9–12: Add D30+ practices (retinol, heavy stubble maintenance, advanced grooming precision, increased protein targets, push isolation exercises to failure).
 
 PRIORITIZATION LOGIC:
   • Lowest-scoring tiers get the most protocol attention.
-  • If tier_posture < 55: front-load P1, P2, P3, P4 in Week 1.
+  • If tier_posture < 55 AND posture notes suggest FHP ONLY (no kyphosis indicators): front-load P1, P2, P3, P4, P8, P14 in Weeks 1–2.
+  • If tier_posture < 55 AND posture notes suggest FHP + kyphosis: follow proximal-before-distal sequencing — front-load P4, P5, P8, P14 in Weeks 1–2; add P6, P13, P10 in Weeks 3–6; add P1, P3 in Weeks 7–9 minimum.
   • If tier_skin < 55: front-load S1, S2, S3 in Week 1; add acne-specific active in Week 2.
   • If tier_grooming < 55: front-load G1 or G9 + G2 + G7 in Week 1.
   • If tier_body < 55: introduce body phenotype-appropriate nutrition in Week 1; B17 (LISS aerobic) from Week 1 for fat-loss profiles; B12 + B1 from Week 2.
