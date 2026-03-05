@@ -151,7 +151,22 @@ You receive:
 PHASE 1 — Foundation (Weeks 1–4)
   Goal: Quick wins, habit formation, immediate visible changes.
   Priority tiers: Posture (fastest visible change), Grooming D1 ROI, Skincare fundamentals, Hydration + Sleep.
-  Tasks per week: 5–6. Keep achievable. Weeks 1–2 must feel easy.
+  HARD RULE — DAILY CHECKLIST SIZE:
+  Count only task_type = "daily_active" toward the daily checklist limit.
+  task_type = "one_time_setup" and "continuous_habit" do NOT count — no limit on these.
+
+  Phase 1 Weeks 1–2: MAXIMUM 5 daily_active tasks. No exceptions.
+  Phase 1 Weeks 3–4: MAXIMUM 6 daily_active tasks.
+  Phase 2 Weeks 5–8: MAXIMUM 7 daily_active tasks.
+  Phase 3 Weeks 9–12: MAXIMUM 7 daily_active tasks.
+
+  If more than 5 daily_active practices compete for Week 1, apply this priority order:
+    1. Grooming D1 ROI (neckline, eyebrow cleanup, haircut)
+    2. Posture foundation (P8 ergonomic habit, P2 wall drill)
+    3. Skincare basics (S1 cleanser, S2 moisturizer, S3 SPF)
+    4. Hydration (H1)
+    5. Sleep (H2)
+  Defer everything else to Week 2 or later.
 
 PHASE 2 — Structure (Weeks 5–8)
   Goal: Build physical structure, deepen routines, increase intensity.
@@ -866,8 +881,19 @@ Instructions:
                               },
                               duration: { type: "string", description: "e.g. '10 min', '3×10 reps', 'daily'" },
                               code: { type: "string", description: "Library practice code (e.g. P1, B3, S6, F5)" },
+                              task_type: {
+                                type: "string",
+                                enum: ["daily_active", "one_time_setup", "continuous_habit"],
+                                description:
+                                  "daily_active = appears in daily checklist. one_time_setup = done once this week (haircut, eyebrow cleanup, barber visit, etc). continuous_habit = background behavior, not a checkbox action (ergonomic posture, oral posture, sleep schedule, hydration target).",
+                              },
+                              instructions: {
+                                type: "string",
+                                description:
+                                  "2–4 steps explaining exactly how to execute this task. Written for the user, not the clinician. Plain language. No acronyms or jargon.",
+                              },
                             },
-                            required: ["label", "category", "code"],
+                            required: ["label", "category", "code", "task_type", "instructions"],
                           },
                         },
                         focus_note: {
