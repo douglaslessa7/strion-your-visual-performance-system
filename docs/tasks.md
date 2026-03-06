@@ -263,6 +263,9 @@ CREATE TRIGGER on_auth_user_created_role
 - [x] Display only assigned tasks (view-only)
 - [x] Highlight current week
 - [x] Disable editing (user executes, system calibrates)
+- [x] Filter Dashboard missions to `daily_active` task_type only
+- [x] Separate Protocol tasks into 3 visual sections by task_type (Daily Missions, This Week Setup, Ongoing Habits)
+- [x] Tap-to-expand task instructions in Dashboard and Protocol screens (single-expand, chevron indicator)
 
 ---
 

@@ -12,6 +12,7 @@ interface TaskItem {
   category: string;
   duration?: string;
   task_type?: string;
+  instructions?: string;
 }
 
 interface WeekData {
@@ -40,6 +41,7 @@ const Protocol = () => {
   const [currentWeek, setCurrentWeek] = useState<number | null>(null);
   const [loading, setLoading] = useState(true);
   const [expandedWeeks, setExpandedWeeks] = useState<Set<string>>(new Set());
+  const [expandedTask, setExpandedTask] = useState<string | null>(null);
 
   useEffect(() => {
     if (!user) return;
@@ -94,6 +96,11 @@ const Protocol = () => {
       else next.add(key);
       return next;
     });
+  };
+
+  const handleTaskClick = (taskKey: string, hasInstructions: boolean) => {
+    if (!hasInstructions) return;
+    setExpandedTask(expandedTask === taskKey ? null : taskKey);
   };
 
   const isCurrentWeek = (phase: string, week: number) =>
@@ -193,19 +200,39 @@ const Protocol = () => {
                                       {section.title}
                                     </p>
                                     <div className="space-y-1">
-                                      {section.items.map((task, idx) => (
-                                        <div key={task.id || idx} className="flex items-center justify-between py-1.5 pl-2">
-                                          <div>
-                                            <span className="text-sm text-secondary-foreground">
-                                              {task.label || task.name}
-                                              {task.duration ? ` — ${task.duration}` : ""}
-                                            </span>
-                                            <span className="ml-2 text-[10px] text-muted-foreground uppercase tracking-wider">
-                                              {task.category}
-                                            </span>
+                                      {section.items.map((task, idx) => {
+                                        const taskKey = `${key}-${task.id || task.label || idx}`;
+                                        const hasInstructions = !!task.instructions?.trim();
+                                        const isTaskExpanded = expandedTask === taskKey;
+
+                                        return (
+                                          <div
+                                            key={taskKey}
+                                            onClick={() => handleTaskClick(taskKey, hasInstructions)}
+                                            className={`py-1.5 pl-2 ${hasInstructions ? "cursor-pointer" : ""}`}
+                                          >
+                                            <div className="flex items-center justify-between">
+                                              <div>
+                                                <span className="text-sm text-secondary-foreground">
+                                                  {task.label || task.name}
+                                                  {task.duration ? ` — ${task.duration}` : ""}
+                                                </span>
+                                                <span className="ml-2 text-[10px] text-muted-foreground uppercase tracking-wider">
+                                                  {task.category}
+                                                </span>
+                                              </div>
+                                              {hasInstructions && (
+                                                <ChevronRight className={`w-3.5 h-3.5 text-muted-foreground shrink-0 transition-transform duration-200 ${isTaskExpanded ? "rotate-90" : ""}`} />
+                                              )}
+                                            </div>
+                                            {isTaskExpanded && (
+                                              <p className="text-xs text-muted-foreground mt-1 pl-2">
+                                                {task.instructions}
+                                              </p>
+                                            )}
                                           </div>
-                                        </div>
-                                      ))}
+                                        );
+                                      })}
                                     </div>
                                   </div>
                                 ))}

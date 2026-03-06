@@ -1,6 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { TrendingUp, TrendingDown, Minus, Check, Clock, Loader2, AlertCircle } from "lucide-react";
+import { TrendingUp, TrendingDown, Minus, Check, Clock, Loader2, AlertCircle, ChevronRight, ChevronDown } from "lucide-react";
 import BottomNav from "@/components/dashboard/BottomNav";
 import { Button } from "@/components/ui/button";
 import { useDashboardData, useGenerateProtocol } from "@/hooks/useDashboardData";
@@ -9,10 +9,10 @@ const Dashboard = () => {
   const { data, loading, toggleMission } = useDashboardData();
   const generateProtocol = useGenerateProtocol();
   const navigate = useNavigate();
+  const [expandedTask, setExpandedTask] = useState<string | null>(null);
 
   const checkpointReached = data && data.nextCheckpointDays <= 0;
 
-  // Auto-generate protocol if none exists and missions are empty
   useEffect(() => {
     if (data && data.todayMissions.length === 0 && !generateProtocol.isPending && !generateProtocol.isSuccess) {
       generateProtocol.mutate();
@@ -29,6 +29,11 @@ const Dashboard = () => {
 
   const TrendIcon = data.trendDirection === "positive" ? TrendingUp : data.trendDirection === "negative" ? TrendingDown : Minus;
   const trendColor = data.trendDirection === "positive" ? "text-positive" : data.trendDirection === "negative" ? "text-warning-muted" : "text-muted-foreground";
+
+  const handleRowClick = (label: string, hasInstructions: boolean) => {
+    if (!hasInstructions) return;
+    setExpandedTask(expandedTask === label ? null : label);
+  };
 
   return (
     <div className="min-h-screen bg-background pb-20">
@@ -114,23 +119,43 @@ const Dashboard = () => {
             <p className="text-sm text-muted-foreground py-4 text-center">No missions assigned for this week.</p>
           ) : (
             <div className="space-y-2">
-              {data.todayMissions.map((m) => (
-                <button
-                  key={m.label}
-                  onClick={() => toggleMission.mutate({ label: m.label, currentlyDone: m.done })}
-                  disabled={toggleMission.isPending}
-                  className="w-full flex items-center gap-3 bg-card rounded-lg border border-border px-4 py-3 shadow-card transition-system hover:border-primary/20 active:scale-[0.98]"
-                >
-                  <div className={`w-5 h-5 rounded flex items-center justify-center border ${
-                    m.done ? 'bg-primary border-primary' : 'border-border'
-                  }`}>
-                    {m.done && <Check className="w-3 h-3 text-primary-foreground" />}
+              {data.todayMissions.map((m) => {
+                const hasInstructions = !!m.instructions?.trim();
+                const isExpanded = expandedTask === m.label;
+
+                return (
+                  <div
+                    key={m.label}
+                    onClick={() => handleRowClick(m.label, hasInstructions)}
+                    className={`w-full bg-card rounded-lg border border-border px-4 py-3 shadow-card transition-system hover:border-primary/20 ${hasInstructions ? "cursor-pointer" : ""}`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleMission.mutate({ label: m.label, currentlyDone: m.done });
+                        }}
+                        className={`w-5 h-5 rounded flex items-center justify-center border shrink-0 cursor-pointer ${
+                          m.done ? 'bg-primary border-primary' : 'border-border'
+                        }`}
+                      >
+                        {m.done && <Check className="w-3 h-3 text-primary-foreground" />}
+                      </div>
+                      <span className={`text-sm text-left flex-1 ${m.done ? 'text-muted-foreground line-through' : 'text-foreground'}`}>
+                        {m.label}{m.duration ? ` — ${m.duration}` : ""}
+                      </span>
+                      {hasInstructions && (
+                        <ChevronRight className={`w-3.5 h-3.5 text-muted-foreground shrink-0 transition-transform duration-200 ${isExpanded ? "rotate-90" : ""}`} />
+                      )}
+                    </div>
+                    {isExpanded && (
+                      <p className="text-xs text-muted-foreground mt-1 pl-8">
+                        {m.instructions}
+                      </p>
+                    )}
                   </div>
-                  <span className={`text-sm text-left ${m.done ? 'text-muted-foreground line-through' : 'text-foreground'}`}>
-                    {m.label}{m.duration ? ` — ${m.duration}` : ""}
-                  </span>
-                </button>
-              ))}
+                );
+              })}
             </div>
           )}
         </div>
