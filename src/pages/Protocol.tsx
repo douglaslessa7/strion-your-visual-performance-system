@@ -11,6 +11,7 @@ interface TaskItem {
   name?: string;
   category: string;
   duration?: string;
+  task_type?: string;
 }
 
 interface WeekData {
@@ -170,26 +171,47 @@ const Protocol = () => {
                             )}
                           </button>
 
-                          {expanded && (
-                            <div className="px-5 pb-3 space-y-1.5">
-                              {w.tasks.map((task, idx) => (
-                                <div key={task.id || idx} className="flex items-center justify-between py-1.5 pl-2">
-                                  <div>
-                                    <span className="text-sm text-secondary-foreground">
-                                      {task.label || task.name}
-                                      {task.duration ? ` — ${task.duration}` : ""}
-                                    </span>
-                                    <span className="ml-2 text-[10px] text-muted-foreground uppercase tracking-wider">
-                                      {task.category}
-                                    </span>
+                          {expanded && (() => {
+                            const daily = w.tasks.filter((t) => t.task_type === "daily_active");
+                            const setup = w.tasks.filter((t) => t.task_type === "one_time_setup");
+                            const habits = w.tasks.filter((t) => t.task_type === "continuous_habit");
+                            const sections = [
+                              { title: "Daily Missions", items: daily },
+                              { title: "This Week Setup", items: setup },
+                              { title: "Ongoing Habits", items: habits },
+                            ].filter((s) => s.items.length > 0);
+
+                            if (sections.length === 0) {
+                              return <div className="px-5 pb-3"><p className="text-xs text-muted-foreground pl-2">No tasks assigned.</p></div>;
+                            }
+
+                            return (
+                              <div className="px-5 pb-3 space-y-3">
+                                {sections.map((section) => (
+                                  <div key={section.title}>
+                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5 pl-2">
+                                      {section.title}
+                                    </p>
+                                    <div className="space-y-1">
+                                      {section.items.map((task, idx) => (
+                                        <div key={task.id || idx} className="flex items-center justify-between py-1.5 pl-2">
+                                          <div>
+                                            <span className="text-sm text-secondary-foreground">
+                                              {task.label || task.name}
+                                              {task.duration ? ` — ${task.duration}` : ""}
+                                            </span>
+                                            <span className="ml-2 text-[10px] text-muted-foreground uppercase tracking-wider">
+                                              {task.category}
+                                            </span>
+                                          </div>
+                                        </div>
+                                      ))}
+                                    </div>
                                   </div>
-                                </div>
-                              ))}
-                              {w.tasks.length === 0 && (
-                                <p className="text-xs text-muted-foreground pl-2">No tasks assigned.</p>
-                              )}
-                            </div>
-                          )}
+                                ))}
+                              </div>
+                            );
+                          })()}
                         </div>
                       );
                     })}
