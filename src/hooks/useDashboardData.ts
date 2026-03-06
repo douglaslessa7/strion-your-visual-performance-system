@@ -8,6 +8,7 @@ interface Task {
   category: string;
   duration?: string;
   task_type?: string;
+  instructions?: string;
 }
 
 export interface DashboardData {
