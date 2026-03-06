@@ -235,6 +235,7 @@ export type Database = {
       protocol_assignments: {
         Row: {
           created_at: string
+          focus_note: string | null
           id: string
           phase: string
           tasks: Json
@@ -244,6 +245,7 @@ export type Database = {
         }
         Insert: {
           created_at?: string
+          focus_note?: string | null
           id?: string
           phase?: string
           tasks?: Json
@@ -253,6 +255,7 @@ export type Database = {
         }
         Update: {
           created_at?: string
+          focus_note?: string | null
           id?: string
           phase?: string
           tasks?: Json

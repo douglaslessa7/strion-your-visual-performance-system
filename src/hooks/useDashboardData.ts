@@ -7,6 +7,7 @@ interface Task {
   label: string;
   category: string;
   duration?: string;
+  task_type?: string;
 }
 
 export interface DashboardData {
@@ -115,7 +116,9 @@ export function useDashboardData() {
         ? (assignments.tasks as unknown as Task[])
         : [];
 
-      const todayMissions = tasks.map((t) => ({
+      const dailyTasks = tasks.filter((t) => t.task_type === "daily_active");
+
+      const todayMissions = dailyTasks.map((t) => ({
         ...t,
         done: completedLabels.includes(t.label),
       }));
